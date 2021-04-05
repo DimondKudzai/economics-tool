@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sahara</title>
+	<script type="text/javascript" src="myvue.js"></script>
+</head>
+<body>
+	<div id="app">
+{{message}}	<br>
+<input type="" name="" v-model="say"><br>
+<button @click="compare">set</button>
+</div>
+
+
+<script type="text/javascript">
+	new Vue({
+		el:"#app",
+		data: {
+			message: "ready",
+			say: this.say
+		},
+		methods: {
+		    compare: function () {
+			                var text= this.say.indexOf('hie')
+			                var text2= this.say.indexOf("hello")
+			                var text3= this.say.indexOf("hey")
+			                if (text !== -1 || text2 !== -1 || text3 !== -1) {
+			                	var response= prompt("how are you friend ?.")
+                                 var reply= response.indexOf('good')
+			                     var reply2= response.indexOf("great")
+			                     var reply3= response.indexOf("wonderful")
+			                     var reply4= response.indexOf("great")
+
+			                	if (reply !== -1 || reply2 !== -1 || reply3 !== -1) {
+			                		this.message= "thats nice to hear!!!"
+			                	}else{
+			                		this.message= "I wasn't expecting that for real lol .."
+			                	}
+			                	}
+			                }
+		         }
+	})
+</script>
+</body>
+</html>

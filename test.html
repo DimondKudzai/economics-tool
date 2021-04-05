@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sahara</title>
+	<script type="text/javascript" src="myvue.js"></script>
+</head>
+<body>
+	<div id="app">
+{{message}}	<br>
+<input type="" name="" v-model="say"><br>
+<button @click="compare">set</button>
+</div>
+
+
+<script type="text/javascript">
+	new Vue({
+		el:"#app",
+		data: {
+			message: "",
+			say: this.say,
+			name: this.name
+		},
+		methods: {
+		    compare: function () {
+			                var text1= this.say.indexOf('hie')
+			                var text2= this.say.indexOf('hello')
+			                var text3= this.say.indexOf('hey')
+			                //var text4= this.say.indexOf('')
+			                var text5= this.say.indexOf('nice')
+			                var text6= this.say.indexOf('evining')
+			                var text7= this.say.indexOf('afternoon')
+			                var text8= this.say.indexOf('morning')
+			                //var text9= this.say.indexOf('friend')
+			                var text10= this.say.indexOf('day')
+
+			           if (text1 !== -1 || text2 !== -1 || text3 !== -1 || text4 !== -1 || text5 !== -1 || text6 !== -1 || text7 !== -1 || text8 !== -1 || text9 !== -1 || text10 !== -1) {
+
+
+                                var d = new Date()
+                                var currentHrs = d.getHours()
+                                var greeting
+
+                                if (currentHrs<=0 && currentHrs<12) {
+                                	greeting= "Good morning"
+                                }else if (currentHrs>=12 && currentHrs<2) {
+                                	greeting= "Good afternoon"
+                                }else if (currentHrs>=2 && currentHrs<4) {
+                                	greeting= "Good day"
+                                }else{
+                                	greeting= "Good evining"
+                                }
+
+
+			                	 var response= prompt(greeting+", how are you friend ?.")
+                                 var reply1= response.indexOf('good')
+			                     var reply2= response.indexOf("great")
+			                     var reply3= response.indexOf("wonderful")
+			                     var reply4= response.indexOf("fine")
+			                     var reply5= response.indexOf('not bad')
+                                 var rreply1= response.indexOf('not')
+			                     var rreply2= response.indexOf("bad")
+			                     var rreply3= response.indexOf("sick")
+			                     var rreply4= response.indexOf("tired")
+			                     
+
+			                	if (reply1 !== -1 || reply2 !== -1 || reply3 !== -1 || reply4 !== -1 || reply5 !== -1 && rreply1 == -1 && rreply2 == -1 && rreply3 == -1 && rreply4 == -1) {
+			                		this.message= "That's nice to hear!. Please feel free to ask me anything about me."
+			                	}else{
+			                		var start= confirm("That was unexpected. Any question?.")
+			                		if (start) {
+			                			this.message= "Go ahead you can ask"
+			                		}
+			                	}
+			            
+			            }else{
+			            	alert("I don't understand")
+			            }
+			            
+
+			       }
+		    }
+	})
+</script>
+</body>
+</html>

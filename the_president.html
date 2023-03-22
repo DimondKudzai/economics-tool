@@ -79,10 +79,10 @@ $(function () {
 
 // animation of tutorial
 
-$("#play").click(function(){
+$("#play,#animView").click(function(){
 $("#notice").html("<em class='specialHead' style='color: white;'>Input first and click set.</em>");
 $("#input").html("<input class='input' placeholder='  421'>");
-$("#set").html("<b style='background-color:green;color:white;border-radius:10px;'>set</b>").animate({width: '+50px'},3000,function(){
+$("#set").html("<b style='background-color:green;color:white;border-radius:10px;'>set</b>").animate({width: '+50px'},2000,function(){
 $("#notice").html("<em class='specialHead' style='color: white;'>Click reset to reset input</em>");
 
 
@@ -594,7 +594,7 @@ Defence & Security:<b style="color: green;">&#160{{ddConvertor}} {{ddtype}}</b>
 new Vue({
 	el: "#app",
 		data: {
-			htmlTexts: ["<div style='width: 80%;margin: 0 auto;'><ul><li>Click set after each input and click reset if you want to reset.</li><li>Some new news may be located even below old news.(check the time). Your news will always be updated automatically.</li><li>Higher tax will increase your Reserve, but may lead to poverty in much of the cityzens hence may lead to civil unrest.</li><li>Security should be your first priority.</li><li>Who doesn't want a healthy life and better education.</li><div id='myjavascript10'></div><li>Click report to view your progress. Your progress will Always be updated automatically.</li><li>Always check the news you will stay updated and learn a lot.</li></ul><<h2 style='color: blue;text-align: center;' id='play'>Click to play tutorial animation</h2><div id='animView' style='background-color: ; border-radius: 15px; width: 60%;margin: 0 auto;border: 1px solid white;'><br><br><center><b><span id='notice'></span></b><br><br><span id='input'><input class='input' placeholder='  0'></span>&#160&#160<span style='background-color:green;color:white;border-radius:10px;' id='set'>set<span><br><center><br></div></div>"],
+			htmlTexts: ["<div style='width: 80%;margin: 0 auto;'><ul><li>Click set after each input and click reset if you want to reset.</li><li>Some new news may be located even below old news.(check the time). Your news will always be updated automatically.</li><li>Higher tax will increase your Reserve, but may lead to poverty in much of the cityzens hence may lead to civil unrest.</li><li>Security should be your first priority.</li><li>Who doesn't want a healthy life and better education.</li><div id='myjavascript10'></div><li>Click report to view your progress. Your progress will Always be updated automatically.</li><li>Always check the news you will stay updated and learn a lot.</li></ul><h2 style='color: red;text-align: center;' id='play'>Click to play tutorial animation</h2><div id='animView' style='background-color: ; border-radius: 15px; width: 60%;margin: 0 auto;border: 1px solid white;'><br><br><center><b><span id='notice'></span></b><br><br><span id='input'><input class='input' placeholder='  0'></span>&#160&#160<span style='background-color:green;color:white;border-radius:10px;' id='set'>set<span><br><center><br></div></div>"],
 			bestNews: "zzc news:__High hopes as new President takes over by storm.",
 			moneySupply: 0,
 			myNewsbest: this.myNewsbest,

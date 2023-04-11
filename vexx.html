@@ -1,0 +1,3769 @@
+<!--!
+* (c)2021 Dimond kudzai Madechawo
+* all rights reserved
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical Economics.</title>
+	<meta http-equiv="pragma" content=""/>
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="economics software, economics application, economics online website, macro-economics, educational website by Dimond k"/>
+    <meta  name="description"  content="The President, economics practical","apply real world economics as president"/>
+    <base href="vexx.html"/>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://dimondkudzai.github.io/economics-tool/myjavascript.js"></script>
+<!--<script src="accounting.js"></script>-->
+<!--My external scripts-->
+     <script src= "jquery.min.js"></script>
+
+    <!--<script src= "uicss.js"></script>
+      <script src= "jui.js"></script>*/-->
+       <script src= "vue.min.js"></script>
+</script>
+
+<!--My styles-->
+
+<style type="text/css">
+      .subFont{
+        font-family: 'Raleway', sans-serif;
+        font-size: px;
+        
+      }
+   a{
+text-decoration: none;
+}   
+
+.clickedBut{
+	background-color: purple; 
+}
+.input{
+	background-color: ;
+	border-radius:25px;
+	border: solid 1px #123;
+	width: 47%;
+	font-size:0.8EM;
+}
+.trinput{
+	margin-right:+20%;
+
+p{
+ font-weight: lighter;
+}
+
+.onn{
+box-shadow: ;
+font-size: 1.5EM;
+font-weight: bold;
+width: 20%;
+height: 20%;
+background-color: blue;
+color: white;
+font-family: 'Raleway', sans-serif;
+border-radius: 25px 25px 25px 25px;
+border: 1px solid blue;
+}
+.offf{
+box-shadow: ;
+font-size: 1.5EM;
+font-weight: bold;
+width: 20%;
+height: 20%;
+background-color: white;
+color: blue;
+font-family: 'Raleway', sans-serif;
+border-radius: 25px 25px 25px 25px;
+border: 1px solid blue;
+}
+
+</style>
+
+
+
+<!--jquery code-->
+
+	<script> 
+
+$(function () {
+
+
+// animation of tutorial
+
+$("#play,#animView").click(function(){
+$("#notice").html("<em class='specialHead' style='color: white;'>Input first and click set.</em>");
+$("#input").html("<input class='input' placeholder='  421'>");
+$("#set").html("<b style='background-color:green;color:white;border-radius:10px;'>set</b>").animate({width: '+50px'},2000,function(){
+$("#notice").html("<em class='specialHead' style='color: white;'>Click reset to reset input</em>");
+
+
+$("#set").html("<b style='background-color:red;color:white;border-radius:10px;'>reset</b>");
+
+
+})
+})
+
+
+//hide items or pages not in use
+
+	$("#adviser,#perfomance,#resetinc,#resetcopor,#resetinterest,#newsNet,#resetimport,#resetexport").hide(0.01)
+	$("#home").css("background-color","#123").css("border-radius","15px").css("box-shadow","")
+	$("#home").click(function () {
+		$(this).css("background-color","#123").css("border-radius","15px")
+		$("#news,#advice,#report").css("background-color","brown")
+			$("#text").show(0.01)
+			$("#adviser,#perfomance,#newsNet").hide(0.1)
+	})
+$("#setinc").click(function () {
+	// body...
+	$(this).hide(0.1)
+	$("#incomei").hide(0.1)
+	$("#resetinc").show(0.1)
+})
+
+$("#setimport").click(function () {
+	// body...
+	$(this).hide(0.1)
+	$("#importi").hide(0.1)
+	$("#resetimport").show(0.1)
+})
+
+$("#setexport").click(function () {
+	// body...
+	$(this).hide(0.1)
+	$("#exporti").hide(0.1)
+	$("#resetexport").show(0.1)
+})
+
+$("#setcopor").click(function () {
+	// body...
+	$(this).hide(0.1)
+	$("#coporatei").hide(0.1)
+	$("#resetcopor").show(0.1)
+})
+
+$("#resetinc").click(function () {
+	// body...
+	$(this).hide(0.1)
+	$("#setinc,#incomei").show(0.1)
+})
+
+$("#resetimport").click(function () {
+	// body...
+	$(this).hide(0.1)
+	$("#setimport,#importi").show(0.1)
+})
+
+$("#resetexport").click(function () {
+	// body...
+	$(this).hide(0.1)
+	$("#setexport,#exporti").show(0.1)
+})
+
+$("#resetcopor").click(function () {
+	// body...
+	$(this).hide(0.1)
+	$("#setcopor,#coporatei").show(0.1)
+})
+
+
+
+
+$("#setinterest").click(function () {
+	// body...
+	$(this).hide(0.1)
+	$("#interesti").hide(0.1)
+	$("#resetinterest").show(0.1)
+})
+
+
+$("#resetinterest").click(function () {
+	// body...
+	$(this).hide(0.1)
+	$("#setinterest,#interesti").show(0.1)
+})
+
+	$("#news").click(function () {
+		$(this).css("background-color","#123").css("border-radius","15px")
+		$("#home,#advice,#report").css("background-color","brown")
+			$("#text,#adviser,#perfomance").hide(0.1)
+			$("#newsNet").show(0.1)
+	})
+
+
+
+
+
+	$("#advice").click(function () {
+		$(this).css("background-color","#123").css("border-radius","15px")
+		$("#news,#home,#report").css("background-color","brown")
+			$("#text,#perfomance,#newsNet").hide(0.1)
+						$("#adviser").show(0.1)
+	})
+
+
+
+
+	$("#report").click(function () {
+		$(this).css("background-color","#123").css("border-radius","15px")
+		$("#news,#advice,#home").css("background-color","brown")
+		$("#text,#adviser,#newsNet").hide(0.1)
+		$("#perfomance").show(0.1)
+	})
+
+
+
+//reset buttons hidden here and set buttons show when reset is clicked
+
+	$("#reset1,#reset2,#reset3,#reset4,#reset5").hide(0.1)
+
+	$("#reset1").click(function () {
+		// body...
+		$(this).hide(0.1)
+		$("#set1").show(0.1)
+	})
+
+	$("#reset2").click(function () {
+		// body...
+		$(this).hide(0.1)
+		$("#set2").show(0.1)
+	})
+
+
+	$("#reset3").click(function () {
+		// body...
+		$(this).hide(0.1)
+		$("#set3").show(0.1)
+	})
+
+		$("#reset4").click(function () {
+		// body...
+		$(this).hide(0.1)
+		$("#set4").show(0.1)
+	})
+		$("#reset5").click(function () {
+		// body...
+		$(this).hide(0.1)
+		$("#set5").show(0.1)
+	})
+
+
+	$("#set1").click(function () {
+		// body...
+		$(this).hide(0.1)
+		$("#reset1").show(0.1)
+	})
+		$("#set2").click(function () {
+		// body...
+		$(this).hide(0.1)
+		$("#reset2").show(0.1)
+
+	})
+		$("#set3").click(function () {
+		// body...
+		$(this).hide(0.1)
+		$("#reset3").show(0.1)
+	})
+		$("#set4").click(function () {
+		// body...
+		$(this).hide(0.1)
+		$("#reset4").show(0.1)
+	})
+	     $("#set5").click(function () {
+		// body...
+		$(this).hide(0.1)
+		$("#reset5").show(0.1)
+	})
+
+})
+
+	</script>
+</head>
+<body style="font-family:'Raleway', sans-serif;">
+
+    <br>
+      
+	<div id="myjavascript1"></div>
+<div id="app"  style="font-size:2EM">
+<center><h1 style="color: red;">Vex</h1></center>
+	<div id= "view" @click="" style= "width:100%;border-radius:15px;border: solid 1px purple;background-color:#123;color:white;font-family: 'Raleway', sans-serif;height: 100%;">
+<br>
+<table width= "80%" bgColor= "brown" border= "0" style="border-radius:15px;margin: 0 auto;box-shadow: 2px 2px 2px black;" cellpadding= "5" cellspacing= "5">
+	<tr style="text-align: center;font-weight: bolder;text-shadow: 1px 1px 1px black;">
+</div>
+		<td id= "home">
+	<b>Office</b>
+</td>
+<td id="news" style="">
+
+	<b @click="" style="">
+<img src="globe.gif" width="" height="" style="margin-top: ;width: 4EM;" alt="globe">
+
+<br>
+		<em style="color: ;text-shadow: 2px 2px 2px gold;font-weight: lighter;">News 24/7</em>
+
+			
+	</b>
+	<br>
+	<!-- <span id="sms" style= "background-color: green;position: absolute;">{{text}}</span>-->
+
+</td>
+<td id="advice">
+		<b>Advice</b>
+</td>
+<td id="report">
+	<div>
+	<b @click="prices">
+		<span @click= 'caldeficeit'>
+    Report
+  </span>
+</b>
+   </div>
+</td>
+</tr>
+</div>
+</table>
+<br>
+<center style="background-color: white;">
+<br>
+<marquee direction="left" style="width: 80%;"><b style="color: black; background-color:;">Breaking:&#160</b><b style="color: white; background-color: blue;">Live updates</b> <b style="color: black;">inflation: {{inflation}}% &#160&#160 unemployment: {{unemployment}}% </b>
+<b style="color: blue;"> </b>
+ <em style="font-weight: lighter;color:black;"> {{betterNews}}</em>
+</marquee>
+</center>
+
+<div style= "">
+	<table style= "margin: 0 auto" cellspacing= "0" width= "" id="text" cellpadding="0">
+		<tr>
+			<td>
+				<br>
+<div style= "width:;border-radius:15px;border: solid 1px grey;background-color:white;color: ;font-family:'Raleway', sans-serif;height: 180px;text-align: center;height:100%;margin: 0 auto;box-shadow: 2px 2px 2px black;"> 
+<h2 style= 'color: red;font-weight: bolder;text-shadow:1px 1px 1px black;margin-top:-4px;'><u>Fiscal Policy</u></h2>
+
+
+<form style= "color: black;">
+Average Income tax:<b style="color: green;">{{income}}%</b>&#160&#160&#160<select v-model="income" style= 'background-color: #123;color: white;border:solid 1px black;border-radius: 15px;font-weight: bolder;font-size:0.8EM' id="incomei" data-persist= "garlic" method="post"/>
+
+	    <option value= '0'>0%</option>
+		<option value= '2'>2%</option>
+		<option value= '5'>5%</option>
+	    <option value= '7'>7%</option>
+		<option value= '10'>10%</option>
+		<option value= '13'>13%</option>
+	    <option value= '15'>15%</option>
+		<option value= '17'>17%</option>
+		<option value= '20'>20%</option>
+		<option value= '25'>25%</option>
+		<option value= '30'>30%</option>
+		<option value= '35'>35%</option>
+
+	</select>
+	&#160&#160&#160<b style="background-color:green;color:white;border-radius:10px;" @click= "subtractagriinc" id="setinc">&#160set&#160</b><b style="background-color:red;color:white;border-radius:10px;" @click= "resubtractagriinc" id="resetinc">reset</b>
+
+	<br><br>
+
+	Average Coporate tax:<b style="color: green;">{{coporate}}%</b>&#160&#160&#160<select v-model="coporate" style= 'background-color: #123;color: white;border:solid 1px black;border-radius: 15px;font-weight: bolder;font-size:0.8EM' id="coporatei">
+
+	    <option value= '0'>0%</option>
+	    <option value= '3'>3%</option>
+		<option value= '5'>5%</option>
+		<option value= '7'>7%</option>
+		<option value= '10'>10%</option>
+		<option value= '13'>13%</option>
+		<option value= '15'>15%</option>
+		<option value= '17'>17%</option>
+		<option value= '20'>20%</option>
+		<option value= "25">25%</option>
+		<option value= '30'>30%</option>
+		<option value= '35'>35%</option>
+		<option value= '40'>40%</option>
+</select>
+&#160&#160&#160<b style="background-color:green;color:white;border-radius:10px;" @click= "subtractagricopor" id="setcopor">&#160set&#160</b>
+<b style="background-color:red;color:white;border-radius:10px;" @click= "resubtractagricopor" id="resetcopor">reset</b>
+<br><br>
+
+Average Interest rate:<b style="color: green;">{{interest}}%</b>&#160&#160&#160&#160<select v-model="interest" style= 'background-color: #123;color: white;border:solid 1px black;border-radius: 15px;font-weight: bolder;font-size:0.8EM' id="interesti">
+
+	    <option value= '0'>0%</optio>
+	    <option value= '3'>3%</option>
+		<option value= '5'>5%</option>
+		<option value= '7'>7%</option>
+		<option value= '10'>10%</option>
+		<option value= '13'>13%</option>
+		<option value= '15'>15%</option>
+		<option value= '17'>17%</option>
+		<option value= '20'>20%</option>
+		<option value= "25">25%</option>
+
+</select>
+&#160&#160&#160<b style="background-color:green;color:white;border-radius:10px;" @click= "subtractagriinterest" id="setinterest">&#160set&#160</b>
+<b style="background-color:red;color:white;border-radius:10px;" @click= "resubtractagriinterest" id="resetinterest">reset</b>
+
+<br><br>
+
+
+Average Import Duty:<b style="color: green;">&#160&#160{{importtarif}}</b>&#160&#160&#160&#160<select v-model="importtarif" style= 'background-color: #123;color: white;border:solid 1px black;border-radius: 15px;font-weight: bolder;font-size:0.8EM' id="importi">
+
+	    <option value= 'Reduced'>reduce</option>
+	    <option value= 'Raised'>raise</option>
+
+
+</select>
+&#160&#160&#160<b style="background-color:green;color:white;border-radius:10px;" @click= "subtractagriimport" id="setimport">&#160set&#160</b>
+<b style="background-color:red;color:white;border-radius:10px;" @click= "resubtractagriimport" id="resetimport">reset</b>
+
+<br><br>
+
+
+Average Export Duty:<b style="color: green;">&#160&#160{{exporttarif}}</b>&#160&#160&#160&#160<select v-model="exporttarif" style= 'background-color: #123;color: white;border:solid 1px black;border-radius: 15px;font-weight: bolder;font-size:0.8EM' id="exporti">
+
+	    <option value= 'Reduced'>reduce</option>
+	    <option value= 'Raised'>raise</option>
+
+
+</select>
+&#160&#160&#160<b style="background-color:green;color:white;border-radius:10px;" @click= "subtractagriexport" id="setexport">&#160set&#160</b>
+<b style="background-color:red;color:white;border-radius:10px;" @click= "resubtractagriexport" id="resetexport">reset</b>
+
+<br>
+<br>
+</form>
+<div id="myjavascript2"></div>
+</div>
+</td>
+</tr>
+<tr style= "margin-left:25px">
+<td>
+	<br><br>
+<div style= "text-align: center;border-radius:15px;border: solid 1px white;background-color:white;color: ;font-family: 'Raleway', sans-serif;height: 100%;text-align: left;height: 100%;box-shadow: 2px 2px 2px black"> 
+<h2 style= 'color: red;font-weight: bolder;margin-top:-4px;text-align:center;text-shadow:1px 1px 1px black'><u>Financial plan</u></h2>
+
+<form style= "color: black;" data-persist= "garlic" method="post"/>
+<table cellpadding="2" cellspacing="3">
+	<tr style="margin-left: 25px" data-persist="garlic" method="post">
+		<td>
+Health:<b style="color: green;">&#160{{hhConvertor}} {{hhtype}}</b>
+</td>
+<td class="">
+	<input type= "number" class= "input" v-model="health" @input= "convertorH">&#160<b style="background-color:green;color:white;border-radius:10px;" @click= "subtractagriH" id="set1"><span @click="convertorHH">&#160set&#160</span></b><em style="color: black;">&#160{{hConvertor}} {{htype}}</em>
+</td>
+<td>
+	<b style="background-color:red;color:white;border-radius:10px;" @click= "resubtractagriH" id="reset1">reset</b>
+	</td>
+</tr>
+<tr>
+	<td>
+Agriculture:<b style="color: green;">&#160{{aaConvertor}} {{aatype}}</b>
+</td>
+<td>
+<input type= "number" class= "input" v-model="agricalture" @input="convertorA">&#160<b style="background-color:green;color:white;border-radius:10px;" @click= "subtractagriA" id="set2"><span @click= "convertorAA">&#160set&#160</span></b><em style="color: black;">&#160{{aConvertor}} {{atype}}</em>
+</td>
+<td>
+	<b style="background-color:red;color:white;border-radius:10px;" @click= "resubtractagriA" id="reset2"><span @click= "">reset</span></b>
+	</td>
+</tr>
+<tr>
+	<td>
+Education:<b style="color: green;">&#160{{eeConvertor}} {{eetype}}</b>
+</td>
+<td>
+	<input type= "number" class= "input" v-model= "education" @input="convertorE">&#160<b style="background-color:green;color:white;border-radius:10px;" @click= "subtractagriE" id="set3"><span @click= "convertorEE">&#160set&#160</span></b><em style="color: black;">&#160{{eConvertor}} {{etype}}</em>
+</td>
+<td>
+	<b style="background-color:red;color:white;border-radius:10px;" @click= "resubtractagriE" id="reset3"><span @click= ""> reset</span></b>
+	</td>
+</tr>
+<tr>
+	<td>
+Industry and Commerce:<b style="color: green;">&#160{{iiConvertor}} {{iitype}}</b>
+</td>
+<td>
+<input type= "number" class= "input" v-model= "infrastracture" @input="convertorI">&#160<b style="background-color:green;color:white;border-radius:10px;" @click= "subtractagriI" id="set4"><span @click= "convertorII">&#160set&#160</span></b><em style="color: black;">&#160{{iConvertor}} {{itype}}</em>
+</td>
+<td>
+	<b style="background-color:red;color:white;border-radius:10px;" @click= "resubtractagriI" id="reset4"><span @click= "">reset</span></b>
+	</td>
+</tr>
+<tr>
+	<td>
+Defence & Security:<b style="color: green;">&#160{{ddConvertor}} {{ddtype}}</b>
+</td>
+<td>
+<input type= "number" class= "input" v-model= "defence" @input="convertorD">&#160<b style="background-color:green;color:white;border-radius:10px;" @click= "subtractagriD" id="set5"><span @click= "convertorDD">&#160set&#160</span></b><em style="color: black;">&#160{{dConvertor}} {{dtype}}</em>
+</td>
+<td>
+	<b style="background-color:red;color:white;border-radius:10px;" @click= "resubtractagriD" id="reset5"><span @click= ""> reset</span><br><br></b>
+	</td>
+</tr>
+</table>
+</form>
+</div> 
+</td>
+</tr>
+</table>
+<div id="myjavascript3"></div>
+<div id="adviser" style= "font-family: 'Raleway', sans-serif;color: white;">
+	<div v-html="htmlTexts[0]"></div>
+</div>
+</div>
+
+<div id= "perfomance" style="width: 90%;margin: 0 auto;text-align: center;">
+		<div id="myjavascript4"></div>
+		<h3><u>Economy:</u></h3> <em style="color: ;">{{cityzens}}</em>
+	    <h3>Unemployment: {{unemployment}}%</h3>
+        <h3>Money supply: {{moneySupply}}%</h3>
+        <h3>Money demand: {{moneyDemand}}%</h3>
+		<h3>Inflation: {{inflation}}%</h3>
+		<em style="color: ">bread price: ${{bread}}</em><br>
+		<em style="color: ;">cooking oil price: ${{cooking}}</em><br>
+		<h3><u>Defence and Security:</u></h3> <em style="color: ;">{{securityForce}}</em>
+		<h3 name='deficeit'>Budget Deficeit: <em style="color: yellow">$</em> <span style="color: white;">{{deficeit}}.00</span></h3>
+		<h3 style= 'color: white;'><b>Overall rating</b></h3>
+<div id="myjavascript5"></div>
+	<h3 style= "color: white;text-shadow: 1px 1px 1px black;"><em style="">
+		Class <span style="color: ;" name="rating">{{rating}}</span></em></h3>
+		<br>
+			
+</div>
+
+
+<div id= "newsNet" style="text-align:center; font-family: 'Raleway', sans-serif;">
+		<div id="myjavascript6"></div>
+	<h3 style="color: green;"><u>Main news</u></h3>
+    <div v-html="headlineImg[0]"></div>
+	   <p style="color: ;">
+	   	<em style="color: red;font-weight: bold;font-size: 1.5EM">{{myNewsbest}}</em>&#160{{bestNews}}
+	   </p>
+	   <p style="color: ;">
+	   	<em style="color: red;font-weight: bold;font-size: 1.5EM">{{myNewsbetter}}</em>&#160
+	   {{betterNews}}
+	</p>
+	<div id="myjavascript7"></div>
+	   <p style="color: ;">
+	   	<em style="color: red;font-weight: bold;font-size: 1.5EM">{{myNewsworse}}</em>&#160
+	   {{worseNews}}
+	</p>
+	   <p style="color: ;">
+	   	<em style="color: red;font-weight: bold;font-size: 1.5EM">{{myNewsbest2}}</em>&#160
+	   {{bestNews2}}
+	</p>
+	   <p style="color: ;">
+	   	<em style="color: red;font-weight: bold;font-size: 1.5EM">{{myNewsbetter2}}</em>&#160
+	   {{betterNews2}}
+	</p>
+	   <p style="color: ;">
+	   	<em style="color: red;font-weight: bold;font-size: 1.5EM">{{myNewsworse2}}</em>&#160
+	   {{worseNews2}}
+	</p>
+	<div id="myjavascript8"></div>
+       <h3 style="color: green;"><u>Business news</u></h3>
+<div v-html="businessImg[0]"></div>
+	   <p style="color: ;">
+	   	<em style="color: red;font-weight: bold;font-size: 1.5EM">{{myNewsBbest}}</em>&#160
+	   {{BbestNews}}
+	</p>
+	   <p style="color: ;">
+	   	<em style="color: red;font-weight: bold;font-size: 1.5EM">{{myNewsBbetter}}</em>&#160
+	   {{BbetterNews}}
+	</p>
+	   <em style="color: red;font-weight: bold;font-size: 1.5EM">{{myNewsBworse}}</em>&#160{{BworseNews}}
+	</p>
+			
+</div>
+
+
+<div style= "text-align: center;font-size: 1.6EM" id= "overalls" name="changeDeficeit">
+	<br>
+<hr>
+	<br><br>
+<div id="myjavascript9"></div>
+
+	<em style= "color: white">Reserve: &#160</b><b style= "color:yellow;">$&#160</em><b style= "color:white"><span name="deficeit">{{cash}}.00</span></b>
+
+
+<!--<marquee direction="up" style="float: ; margin-left: 10%;">{{inflation}}</marquee>-->
+
+    <br><br><br>
+     <a href="index.html"><button style="background-color:red;color:white;border-radius: 10px;border: solid 1px red;font-size: 1.2EM;box-shadow: 3px 3px 3px black;text-shadow: 2px 2px 2px black;">Resign</button></a>
+     <br><br><br>
+
+</div>
+
+</div>
+</div>
+
+<footer style="font-family: 'Raleway', sans-serif;
+        font-size: 2em; color:black;font-weight:300;">
+<center class="">
+<hr>
+
+<a href="https://www.facebook.com/profile.php?id=100079989520136">
+<b>FACEBOOK</b>
+<!--
+<img src="facebook.png" class="icon"/>
+-->
+</a>&#160&#160&#160&#160&#160<a href="https://wa.me/263783702724?text=Hie%20Dimond%20about%20web%20development">
+<b style="color: green;text-decoration: non">WHATSAPP</b>
+<!--<img src="whatsapp.png" class="icon"/>--></a>
+<br><br>
+&copy2021-2023 Dimond Madechawo<br>
+all rights reserved<br>
++263783702724<br>
+<img src="vlogo.png" style="border-radius: 50%;width: 2em;">
+</center>
+</footer>
+<script>
+
+/*!
+* (c)2021 Dimond kudzai Madechawo
+* all rights reserved
+*/
+
+
+
+new Vue({
+	el: "#app",
+		data: {
+			htmlTexts: ["<div style='width: 80%;margin: 0 auto;'><ul><li>Click set after each input and click reset if you want to reset.</li><li>Some new news may be located even below old news.(check the time). Your news will always be updated automatically.</li><li>Higher tax will increase your Reserve, but may lead to poverty in much of the cityzens hence may lead to civil unrest.</li><li>Security should be your first priority.</li><li>Who doesn't want a healthy life and better education.</li><div id='myjavascript10'></div><li>Click report to view your progress. Your progress will Always be updated automatically.</li><li>Always check the news you will stay updated and learn a lot.</li></ul><h2 style='color: red;text-align: center;' id='play'>Click to play tutorial animation</h2><div id='animView' style='background-color: ; border-radius: 15px; width: 60%;margin: 0 auto;border: 1px solid white;'><br><br><center><b><span id='notice'></span></b><br><br><span id='input'><input class='input' placeholder='  0'></span>&#160&#160<span style='background-color:green;color:white;border-radius:10px;' id='set'>set<span><br><center><br></div></div>"],
+			bestNews: "zzc news:__High hopes as new President takes over by storm.",
+			moneySupply: 0,
+			myNewsbest: this.myNewsbest,
+			moneyDemand: 0,
+			betterNews: this.betterNews,
+	        myNewsbetter: this.myNewsbetter,
+			worseNews: "Opposition__economics never lie, economic stability can be easyly improved.",
+			headlineImg:["<div><img src='happy.jpg' width='80%' alt='happy'></div>"],
+			businessImg:["<div><img src='poor2.jpg' width='80%' alt='poor2'></div>"],
+			myNewsworse: this.myNewsworse,
+			bestNews2: this.bestNews2,
+			myNewsbest2: this.myNewsbest2,
+			betterNews2: this.betterNews2,
+			myNewsbetter2: this.myNewsbetter2,
+			worseNews2: this.worseNews2,
+			myNewsworse2: this.myNewsworse2,
+			BbestNews: "Economic analyst__'Unemployment a security threat.'",
+			myNewsBbest: this.myNewsBbest,
+			BbetterNews: "sstudio 77__President support is all what the industry needs now.",
+			myNewsBbetter: this.myNewsBbetter,
+			BworseNews: this.BworseNews,
+			myNewsBworse: this.myNewsBworse,
+			rating: "not yet available.",
+			cashtype: this.cashtype,
+			deficeitType: this.deficeitType,
+			cash: 3000000000,
+			interest: undefined,
+			income: undefined,
+			coporate: undefined,
+			agricalture: 0,
+			infrastracture: 0,
+			defence: 0,
+			health: 0,
+			education: 0,
+			htype: this.htype,
+			hConvertor: this.hConvertor,
+			atype: this.atype,
+			aConvertor: this.aConvertor,
+			etype: this.etype,
+			eConvertor: this.eConvertor,
+			itype: this.itype,
+			iConvertor: this.iConvertor,
+			dtype: this.dtype,
+			dConvertor: this.dConvertor,
+			cityzens: "not yet available",
+			unemployment: 80,
+			inflation: 0,
+			securityForce: "Not yet available",
+			hhtype: this.htype,
+			hhConvertor: this.hhConvertor,
+			aatype: this.eatype,
+			aaConvertor: this.aConvertor,
+			eetype: this.eetype,
+			eeConvertor: this.eConvertor,
+			iitype: this.iitype,
+			iiConvertor: this.iiConvertor,
+			ddtype: this.ddtype,
+			ddConvertor: this.ddConvertor,
+			cooking: 3,
+			bread: 1,
+			deficeit: 0,
+			importtarif: undefined,
+			exporttarif: undefined,
+			randomNum: this.randomNum
+
+		},
+
+		methods: {
+
+			//function that generates rundom numbers
+
+			rundomgenerator: function (maxNumber) {
+				 this.randomNum= Math.floor(Math.random() * (maxNumber-1) + 1)
+			},
+
+             //calculate Money Supply and demand
+			calMoneySupply: function (supply) {
+				this.moneySupply = this.moneySupply+supply
+				this.moneyDemand = 100-this.moneySupply
+			},
+
+     //empeachment alert function
+
+            impeach: 	function () {
+           	var Impeachment= confirm("Paliament__'You have been impeached, You have over borrowed, The domestic debt *Budget deficeit* is too big hence we lost the trust we had for you' it must be less than $600 million retry?")
+           	 if(Impeachment){
+           		window.location.href="the_president.html"
+             	}
+
+           	
+             },
+
+             //function that extracts real time
+
+            caltime: function () {
+	
+			var myTime= new Date()
+			var hours= myTime.getHours()
+			var mins= myTime.getMinutes()
+			var sec= myTime.getSeconds()
+			return hours+":"+mins+":"+sec
+
+		},
+
+			//budget deficiet monitor
+
+
+			deficietMonitor: function () {
+			
+
+				if (this.cash < 0 && this.cash > -600000000) {
+           	this.bestNews= "Vice President__Mind your Budget deficeit, though it might not cause no harm to the economy if resource allocation is directed to production. For goodness sake it should be less than $600 million, but remember more money supply  means less demand money hence inflation will rise because people will have a lot to spend."
+           alert("You are now running a deficeit of:"+this.cash*(-1))
+           }else if(this.cash <= -600000000){
+           	 this.impeach()
+          
+             }else{
+            	
+            }
+
+            },
+
+            //trade imports duty method
+            subtractagriimport: function () {
+
+                 if (this.defence >= 0 && this.defence < 250000000) {
+                    this.rundomgenerator(13)
+
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsBbetter= this.caltime()
+                     	alert("BREAKING NEWS: because of our poor defence and security.Some violent youth led by the Opposition party, destroyed and looted properties worth $150 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-150000000
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.A cyber criminal, hacked the Reserve accounts and stole $120 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-120000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of morden security checks at our airports and road blocks.The Reserve lost $170 million to smuggling")
+                     	
+			
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badsecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk.?"
+                        this.cash= this.cash-170000000
+                     }else{
+                     	
+                     }
+                 }else if (this.defence >= 250000000 && this.defence < 500000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $80 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-80000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $50 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-50000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $100 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badsecurity2.jpg' alt='badSecurity2' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk?."
+                        this.cash= this.cash-100000000
+                      }else{
+
+                     }
+                 }else  if (this.defence >= 500000000 && this.defence < 900000000) {
+				
+             this.rundomgenerator(13)
+
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted properties worth $8 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-8000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $5 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-5000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'."
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $10 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badsecurity3.jpg' alt=badSecurity3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk?."
+                        this.cash= this.cash-10000000
+                       }else{
+
+                   }
+
+            }else if(this.defence>=900000000){
+               this.rundomgenerator(13)
+
+                           
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our strong defence and security.Some violent youth led by the Opposition party tried to hold an illigal demostration today but they were delt with throughly.")
+                     	
+			this.myNewsbetter= this.caltime()
+                    
+                     	this.betterNews= "Cityzens__'We are proud of security forces'."
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='goodsecurity.jpg' alt='goodSecurity' width='80%'></div>"]
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate. Why use force?."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. $50 million which was stolen under the former President was recovered and the Reserve got all of it.")
+                     	this.cash= this.cash+500000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of our defence security'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of the President strong funding in morden security checking points at our airports and road blocks.The Reserve recovered $100 million from smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+                     	this.bestNews= "zzc news__ Our security proves to be one of the best in the world"
+                     	this.headlineImg=["<div><img src='goodsecurity2.jpg' alt='goodSecurity2' width='80%'></div>"]
+                       }else{
+                        }
+                    }else{
+                    }
+
+           
+
+				if (this.importtarif=="Raised") {
+					this.inflation= this.inflation+10
+					 this.unemployment= this.unemployment-10
+					 this.cash= this.cash+50000000
+					 this.calMoneySupply(-5)
+
+          this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+       
+			this.myNewsBbest= this.caltime()
+              this.businessImg=["<div><img src='unemployment.jpg' alt='unemployment' width='80%'></div>"]
+
+                     	this.BbestNews= "zzc news__The President keen on improving unemployment by increasing import duty."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                      
+			this.myNewsbest= this.caltime()
+
+			this.headlineImg=["<div><img src='badimports.jpg' alt='badimports' width='80%'></div>"]
+
+                     	this.bestNews= "Opposition party__'importing becoming expensive day after day'."
+                     } else if (this.randomNum==3) {
+                      
+
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__The President champions the increase import duty."
+
+                     }else{
+                     	alert("hello President")
+                     }
+
+				} else if (this.importtarif == "Reduced") {
+                    this.inflation= this.inflation-10
+                     this.unemployment= this.unemployment+10
+                     this.cash= this.cash-50000000
+                     this.calMoneySupply(+5)
+                     this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+
+                     	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "zzc news__Importers happy with the import duty."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "Opposition party__'unemployment is more likey to rise with this kind of madness, imports are not good for the economy'."
+
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__The market now full of cheap foreign products. Some of these products are of low quality."
+                     }else{
+                     	alert("hello President")
+                     }
+
+
+				}else{
+
+				}
+				
+				this.deficietMonitor()	
+			},
+
+       //export duty function
+       
+			 subtractagriexport: function () {
+
+             if (this.defence >= 0 && this.defence < 250000000) {
+                        this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $150 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-150000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'we are not happy with our security'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.A cyber criminal, hacked the Reserve accounts and stole $120 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-120000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of morden security checks at our airports and road blocks.The Reserve lost $170 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity4.jpg' alt='badSecurity4' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk?."
+                        this.cash= this.cash-170000000
+                     }else{
+                     	
+                     }
+                 }else if (this.defence >= 250000000 && this.defence < 500000000) {
+                           this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $80 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-80000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $50 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-50000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $100 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__There might be a security threat."
+                        this.cash= this.cash-100000000
+                      }else{
+
+                     }
+                 }else  if (this.defence >= 500000000 && this.defence < 900000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted properties worth $8 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-8000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__'Poor defence and security the president's biggest challenge."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $5 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-5000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'."
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks. The Reserve lost $10 million to smuggling.")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity3.jpg' alt='badSecurity3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk?."
+                        this.cash= this.cash-10000000
+                       }else{
+
+                   }
+
+            }else if(this.defence>=900000000){
+         
+              this.rundomgenerator(13)
+
+                           
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our strong defence and security.Some Political activits tried to cause violents but they were delt with throughly.")
+
+                     	
+			this.myNewsbetter= this.caltime()
+                    
+                     	this.betterNews= "Cityzens__'We are proud of security forces'."
+
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='violents.jpg' alt='violents' width='80%'></div>"]
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate. Why use force??."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. $50 million which was stolen under the former President was recovered and the Reserve got all of it.")
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.cash= this.cash+500000000
+                     	this.betterNews= "Cityzens__'We are proud of our defence security'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of the President strong funding in morden security checking points at our airports and road blocks.The Reserve recovered $100 million from smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='goodSecurity.jpg' alt='goodSecurity' width='80%'></div>"]
+                     	this.bestNews= "zzc news__ Our security proves to be one of the best in the world"
+                       }else{
+                        }
+                    }else{
+                    }
+
+
+
+				if (this.exporttarif=="Raised") {
+					this.inflation= this.inflation-10
+					 this.unemployment= this.unemployment+10
+					 this.cash= this.cash+50000000
+
+					 this.calMoneySupply(-5)
+
+                     this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsBbest= this.caltime()
+			this.businessImg=["<div><img src='inflation.jpg' alt='inflation' width='80%'></div>"]
+                     	this.BbestNews= "zzc news__The President keen on improving inflation by increasing export duty. this will force all producers to flood the local market"
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badexport.jpg' alt='badexport' width='80%'></div>"]
+                     	this.bestNews= "Opposition party__'exporting becomes expensive day after day..a lot of people in the exporting industries are going to loose their jobs which will worsen our unemployment rate.'"
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__The President champions the increase in export duty to resolve inflation."
+
+                     }else{
+                     	alert("hello President")
+                     }
+
+				} else if (this.exporttarif == "Reduced") {
+                    this.inflation= this.inflation+10
+                     this.unemployment= this.unemployment-10
+                     this.cash= this.cash-50000000
+                     this.calMoneySupply(5)
+
+
+                    this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "economists__The government has reduced export duty. This may likely cause inflation as most business will skip the local market going for foreign market hence shortages will erupt."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     
+			this.myNewsbest2= this.caltime()
+                     	
+
+                     	this.bestNews2= "zzc news__'The exporting industry continues to create jobs'."
+
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__The local market in short of supply."
+                     }else{
+                     	alert("hello President")
+                     }
+
+
+				}else{
+
+				}
+
+				this.deficietMonitor()
+					
+			},
+             //the method @click reset for import
+
+            resubtractagriimport: function () {
+				// body...
+				if (this.importtarif == "Reduced") {
+					this.inflation= this.inflation+10
+					 this.unemployment= this.unemployment-10
+					 this.cash= this.cash+50000000
+					 this.calMoneySupply(-5)
+
+					}else{
+					 this.inflation= this.inflation-10
+					 this.unemployment= this.unemployment+10
+					 this.cash= this.cash-50000000
+					 this.calMoneySupply(5)
+
+					 }
+					 return this.importtarif=""
+           },
+           //the method @click reset for export
+             resubtractagriexport: function () {
+				// body...
+				if (this.exporttarif == "Reduced") {
+					this.inflation= this.inflation-10
+					 this.unemployment= this.unemployment+10
+					 this.cash= this.cash+50000000
+					 this.calMoneySupply(-5)
+
+					}else{
+					 this.inflation= this.inflation+10
+					 this.unemployment= this.unemployment-10
+					 this.cash= this.cash-50000000
+					 this.calMoneySupply(5)
+
+					 }
+					 return this.exporttarif=""
+           },
+
+
+			//fun that runs on clicking report
+			//this calculates grade,economy type and defence and security
+			   caldeficeit: function () {
+
+			   	if (this.unemployment >= 100) {
+			   		return this.unemployment=99
+
+			   	}
+
+			   	if (this.unemployment <= 0) {
+			   		return this.unemployment=2
+
+			   	}
+
+
+
+
+				this.cityzens= (this.inflation+this.unemployment)/2.5
+				if (this.cityzens<=10) {
+					this.cityzens= "Upper class"
+					this.rating= "A"
+				} else if(this.cityzens >10 && this.cityzens<24){
+                     this.cityzens= "Upper to Middle class"
+                     this.rating= "B"
+				} else if (this.cityzens>=24 && this.cityzens<30){
+                    this.cityzens= "Middle class"
+                    this.rating= "C"
+
+                } else if (this.cityzens>=30 && this.cityzens<40){
+                    this.cityzens= "Middle to lower class"
+                    this.rating= "D"
+                } else if (this.cityzens>=40 && this.cityzens<50){
+                    this.cityzens= "lower class"
+                    this.rating= "E"
+                }else{
+                	this.cityzens= "lower class"
+                    this.rating= "F"
+                }    
+               
+                 
+                if (this.defence<=750000000) {
+					this.securityForce= "Very bad"
+				} else if (this.defence>750000000 && this.defence<850000000){
+                    this.securityForce= "Low"
+				} else if (this.defence>=850000000 && this.defence<900000000){
+                    this.securityForce= "Moderate"
+                } else if (this.defence>=900000000 && this.defence<950000000){
+                    this.securityForce= "Good"
+                }else{
+                	this.securityForce= "Very Good"
+                }    
+
+				if (this.cash<0){
+					this.deficeit= this.cash*-1
+
+				}else{
+					this.deficeit= 0
+				}
+
+
+			},
+			// @click set interest
+			
+			subtractagriinterest: function () {
+				// body...
+				this.interest= this.interest*1
+
+
+
+             if (this.defence >= 0 && this.defence < 250000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $150 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-150000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.A cyber criminal, hacked the Reserve accounts and stole $120 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-120000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of morden security checks at our airports and road blocks.The Reserve lost $170 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity3.jpg' alt='badSecurity3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__We are not safe as a nation. Our security is not good at all!."
+                        this.cash= this.cash-170000000
+                     }else{
+                     	
+                     }
+                 }else if (this.defence >= 250000000 && this.defence < 500000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $80 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-80000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $50 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-50000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $100 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity3.jpg' alt='badSecurity3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk.??"
+                        this.cash= this.cash-100000000
+                      }else{
+
+                     }
+                 }else  if (this.defence >= 500000000 && this.defence < 900000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted properties worth $8 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-8000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $5 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-5000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $10 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Seriously our security at risk!."
+                        this.cash= this.cash-10000000
+                       }else{
+
+                   }
+
+            }else if(this.defence>=900000000){
+           this.rundomgenerator(13)
+
+                           
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. We were able to stop violents which was planned today.")
+                    
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of security forces'."
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='violents2.jpg' alt='violents2' width='80%'></div>"]
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate. Why use force??."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. $50 million which was stolen under the former President was recovered and the Reserve got all of it.")
+                     	this.cash= this.cash+500000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of our defence security'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of the President strong funding in morden security checking points at our airports and road blocks.The Reserve recovered $100 million from smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='goodSecurity3.jpg' alt='goodSecurity3' width='80%'></div>"]
+                     	this.bestNews= "zzc news__ Our security proves to be one of the best in the world"
+                       }else{
+                        }
+                    }else{
+                    }
+
+
+
+           
+
+				if (this.interest<=0) {
+					this.inflation= this.inflation+25
+					 this.unemployment= this.unemployment-10
+                      this.calMoneySupply(10)
+
+                     this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "zzc news__The President keen on improving unemployment by adopting the '0%' intrest rate. This will encourage small business, individuals and even big organisations to borrow for expansion and other purposes"
+                       
+                     } else if (this.randomNum==2) {
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='opposition.jpg' alt='opposition' width='80%'></div>"]
+                     	this.bestNews= "Opposition party__'This is pure vote buying nothing more. Interest rate should never be this low, inflation will sky rocket because they will be more money in the economy.'"
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__The President champions the '0%' interest rate. This is government expenditure on it's on."
+
+                     }else{
+                     	alert("hello President")
+                     }
+
+				} else if (this.interest>2.9 && this.interest<3.1) {
+                    this.inflation= this.inflation+15
+                     this.unemployment= this.unemployment-8
+                     this.cash= this.cash+20000000
+                     this.calMoneySupply(9)
+
+
+                    this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "zzc news__Business happy with the 3% interest rate and the expansion level is good"
+                       
+                     } else if (this.randomNum==2) {
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='opposition2.jpg' alt='opposition2' width='80%'></div>"]
+                     	this.bestNews= "Opposition party__'Inflation is more likey to rise with this kind of interest rate'."
+
+                     } else if (this.randomNum==3) {
+                     	this.caltime(9)
+			this.myNewsbetter= hours+":"+mins+":"+sec
+                     	this.betterNews= "zzc news__Businesses continue to borrow"
+                     }else{
+                     	alert("hello President")
+                     }
+
+
+				}else if (this.interest>4.9 && this.interest<5.1) {
+					 this.inflation= this.inflation+13
+					  this.unemployment= this.unemployment-7
+					   this.cash= this.cash+40000000
+					   this.calMoneySupply(8)
+
+
+				}else if (this.interest>6.9 && this.interest<7.1) {
+					 this.inflation= this.inflation+7
+					  this.unemployment= this.unemployment-5
+					   this.cash= this.cash+50000000
+					   this.calMoneySupply(7)
+
+			}else if (this.interest>9.9 && this.interest<10.1) {
+					 this.inflation= this.inflation
+					  this.unemployment= this.unemployment
+					   this.cash= this.cash+70000000
+                        this.calMoneySupply(6)
+
+
+                        this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__Vice President pledges his support to the current President."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='demostrations.jpg' alt='demostrations' width='80%'></div>"]
+                     	this.bestNews= "Opposition party__'we will be rolling out public demostrations over poor governens'."
+
+                     } else if (this.randomNum==3) {
+                     	this.BbetterNews= "zzc news__ The future may bright"
+                     }else{
+                     	alert("hello President")
+                     }
+
+
+
+			}else if (this.interest>12.9 && this.interest<13.1) {
+					 this.inflation= this.inflation-2
+					  this.unemployment= this.unemployment+1
+					   this.cash= this.cash+80000000
+					   this.calMoneySupply(4)
+
+
+
+			}else if (this.interest>14.9 && this.interest<15.1) {
+					 this.inflation= this.inflation-4
+					  this.unemployment= this.unemployment+3
+					   this.cash= this.cash+90000000
+					   this.calMoneySupply(3)
+
+
+			}else if (this.interest>16.9 && this.interest<17.1) {
+					 this.inflation= this.inflation-7
+					  this.unemployment= this.unemployment+7
+					  this.calMoneySupply(2)
+
+					   this.cash= this.cash+100000000
+					     this.rundomgenerator(4)
+                     if (this.randomNum==1) {
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__Government's Reserve will thicken with high interest rates."
+                       
+                     } else if (this.randomNum==2) {
+
+                     	
+			this.myNewsBbest= this.caltime()
+			this.businesImg=["<div><img src='bank.jpg' alt='bank' width='80%'></div>"]
+                     	this.BbestNews= "Former President__'How can the Business borrow with this interest rate'?."
+
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "sstudio 77__High intrest rates are good for improving inflation as it reduces money supply in the economy."
+                     }else{
+                     	alert("hello President")
+                     }
+
+			}else if (this.interest>19.9 && this.interest<20.1) {
+					 this.inflation= this.inflation-9
+					  this.unemployment= this.unemployment+9
+					   this.cash= this.cash+110000000
+					   this.calMoneySupply(1)
+
+					     this.rundomgenerator(4)
+
+
+             
+                     if (this.randomNum==1) {
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__Government's Reserve will thicken with high interest rates."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsBbest= this.caltime()
+			this.businessImg=["<div><img src='bank2.jpg' alt='bank2' width='80%'></div>"]
+                     	this.BbestNews= "Former President__'How can the Business borrow with this interest rate'?."
+
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "sstudio 77__High interest rates are good for improving inflation as it reduces money supply in the economy."
+                     }else{
+                     	alert("hello President")
+                     }
+
+			}else{
+					 this.inflation= this.inflation-10
+					  this.unemployment= this.unemployment+10
+					   this.cash= this.cash+120000000
+                        this.calMoneySupply(0)
+
+
+					  this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__Government's Reserve will thicken with high interest rates."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsBbest= this.caltime()
+			this.businessImg=["<div><img src='bank3.jpg' alt='bank3' width='80%'></div>"]
+                     	this.BbestNews= "Former President__'How can the Business borrow with this interest rate'?."
+
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "sstudio 77__High intrest rates are good for improving inflation as it reduces money supply in the economy."
+                     }else{
+                     	alert("hello President")
+                     }
+
+			}
+
+
+
+				this.deficietMonitor()
+ 
+
+
+		},
+		resubtractagriinterest: function () {
+				// body...
+				this.interest= this.interest*1
+				if (this.interest<=0) {
+					this.inflation= this.inflation-25
+					 this.unemployment= this.unemployment+10
+					 this.calMoneySupply(-10)
+
+				} else if (this.interest>2.9 && this.interest<3.1) {
+                    this.inflation= this.inflation-15
+                     this.unemployment= this.unemployment+8
+                     this.cash= this.cash-20000000
+                     this.calMoneySupply(-9)
+
+				}else if (this.interest>4.9 && this.interest<5.1) {
+					 this.inflation= this.inflation-13
+					  this.unemployment= this.unemployment+7
+					   this.cash= this.cash-40000000
+					   this.calMoneySupply(-8)
+
+				}else if (this.interest>6.9 && this.interest<7.1) {
+					 this.inflation= this.inflation-7
+					  this.unemployment= this.unemployment+5
+					   this.cash= this.cash-50000000
+					   this.calMoneySupply(-7)
+
+			}else if (this.interest>9.9 && this.interest<10.1) {
+					 this.inflation= this.inflation
+					  this.unemployment= this.unemployment
+					   this.cash= this.cash-70000000
+					   this.calMoneySupply(-6)
+
+			}else if (this.interest>12.9 && this.interest<13.1) {
+					 this.inflation= this.inflation+2
+					  this.unemployment= this.unemployment-1
+					   this.cash= this.cash-80000000
+					   this.calMoneySupply(-4)
+
+			}else if (this.interest>14.9 && this.interest<15.1) {
+					 this.inflation= this.inflation+4
+					  this.unemployment= this.unemployment-3
+					   this.cash= this.cash-90000000
+					   this.calMoneySupply(-3)
+
+			}else if (this.interest>16.9 && this.interest<17.1) {
+					 this.inflation= this.inflation+7
+					 this.calMoneySupply(-2)
+
+					  this.unemployment= this.unemployment-7
+					   this.cash= this.cash-100000000
+			}else if (this.interest>19.9 && this.interest<20.1) {
+					 this.inflation= this.inflation+9
+					  this.unemployment= this.unemployment-9
+					   this.cash= this.cash-110000000
+					   this.calMoneySupply(-1)
+
+			}else{
+					 this.inflation= this.inflation+10
+					  this.unemployment= this.unemployment-10
+					   this.cash= this.cash-120000000
+					   this.calMoneySupply(0)
+
+			}
+			return this.interest= 0
+		},
+
+			subtractagriinc: function () {
+			this.income=(this.income)*1
+
+
+             if (this.defence >= 0 && this.defence < 250000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $150 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-150000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.A cyber criminal, hacked the Reserve accounts and stole $120 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-120000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of morden security checks at our airports and road blocks.The Reserve lost $170 million to smuggling")
+
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at high risk.?"
+                        this.cash= this.cash-170000000
+                     }else{
+                     	
+                     }
+                 }else if (this.defence >= 250000000 && this.defence < 500000000) {
+					this.rundomgenerator(13)
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $80 million.The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-80000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $50 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-50000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $100 million to smuggling")
+
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity2.jpg' alt='badSecurity2' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk.?"
+                        this.cash= this.cash-100000000
+                      }else{
+
+                     }
+                 }else  if (this.defence >= 500000000 && this.defence < 900000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $8 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-8000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $5 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-5000000
+                     	this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $10 million to smuggling")
+
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity3.jpg' alt='badSecurity3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk.??"
+                        this.cash= this.cash-10000000
+                       }else{
+
+                   }
+
+            }else if(this.defence>=900000000){
+           this.rundomgenerator(13)
+
+                           
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our strong defence and security.Some violent youth led by the Opposition party tried to destroy and loot properties in the CBD this afternoon but they were delt with throughly.")
+                    
+                   
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of security forces'."
+
+
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='violents3.jpg' alt='violents3' width='80%'></div>"]
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate.Why use force?.'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. $50 million which was stolen under the former President was recovered and the Reserve got all of it.")
+                     	this.cash= this.cash+500000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of our defence security'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of the President strong funding in morden security checking points at our airports and road blocks.The Reserve recovered $100 million from smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='goodSecurity3.jpg' alt='goodSecurity3' width='80%'></div>"]
+                     	this.bestNews= "zzc news__ Our security proves to be one of the best in the world"
+                       }else{
+                        }
+                    }else{
+                    }
+
+
+
+           
+
+			if (this.income <= 0 ) {
+            this.inflation= (this.inflation*1)+20
+
+
+
+             this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='happy.jpg' alt='happy' width='80%'></div>"]
+                     	this.bestNews= "zzc news__Cityzens happy with '0%' tax."
+                     	this.calMoneySupply(this.inflation)
+
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsbest2= this.caltime()
+                     	this.bestNews2= "Opposition party__'Inflation is more likey to rise with this low income tax. Everyone has more to spend now.'"
+
+                     } else if (this.randomNum==3) {
+
+                     	
+			this.myNewsBbest= this.caltime()
+			this.businessImg=["<div><img src='inflation2.jpg' alt='inflation2' width='80%'></div>"]
+                     	this.BbestNews= "zzc news__Low income tax means people have more to spend."
+                     }else{
+                     	alert("hello President")
+                     }
+
+            this.calMoneySupply(10)
+            
+           }else if (this.income > 1.9 && this.income < 2.1) {
+           	this.inflation= (this.inflation*1)+15
+           	this.cash= (this.cash*1)+10000000
+           
+            this.calMoneySupply(9)
+           }else if (this.income > 4.9 && this.income < 5.1) {
+            this.cash=(this.cash*1)+30000000
+            
+
+
+            this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "zzc news__workers happy with the 5% interest rate."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "sstudio 77__'Inflation continues to worsen'."
+
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "zzc news__Businesses continue to enjoy higher customer volumes"
+                     }else{
+                     	alert("hello President")
+                     }
+
+
+            this.inflation= (this.inflation*1)+10
+            this.calMoneySupply(8)
+           }else if (this.income > 6.9 && this.income < 7.1) {
+       	    this.cash=(this.cash*1)+5000000
+       	    this.calMoneySupply(7)
+
+       	    this.inflation= (this.inflation*1)+8
+           }else if (this.income >9.9 && this.income < 10.1) {
+            this.cash=(this.cash*1)+80000000
+           	this.inflation= (this.inflation*1)+4
+           	this.calMoneySupply(6)
+           }else if (this.income >12.9 && this.income<13.1) {
+           	this.cash=(this.cash*1)+150000000
+           	this.inflation= (this.inflation*1)-3
+           	this.calMoneySupply(5)
+
+           }else if (this.income >14.9 && this.income<15.1) {
+            this.cash=(this.cash*1)+180000000
+            this.unemployment= (this.unemployment*1)+2
+            this.inflation= (this.inflation*1)-7
+            this.calMoneySupply(4)
+
+           }else if (this.income>16.9 && this.income<17.1){
+            this.cash=(this.cash*1)+200000000
+            this.unemployment= (this.unemployment*1)+4
+            this.inflation= (this.inflation*1)-10
+            this.calMoneySupply(3)
+
+           }else if (this.income>19.9 && this.income< 20.1){
+            this.cash=(this.cash*1)+230000000
+            this.unemployment= (this.unemployment*1)+6
+            this.inflation= (this.inflation*1)-12
+            this.calMoneySupply(2)
+
+           }else if (this.income>24.9 && this.income <25.1){
+           	this.cash=(this.cash*1)+300000000
+           	this.unemployment= (this.unemployment*1)+5
+           	this.inflation= (this.inflation*1)-16
+           	this.calMoneySupply(1)
+
+           }else{
+           	this.cash=(this.cash*1)+350000000
+           	this.unemployment= (this.unemployment*1)+10
+           	this.inflation= (this.inflation*1)-20
+           	this.calMoneySupply(0)
+
+           }
+
+
+           
+           if (this.income > 15) {
+
+
+                this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+
+                     	
+			this.myNewsBbest= this.caltime()
+			this.businessImg=["<div><img src='tradeunion.jpg' alt='tradeunion' width='80%'></div>"]
+                     	this.BbestNews= "Trade unions__'Why make people suffer. The workers tax is too much'."
+
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='poor.jpg' alt='poor' width='80%'></div>"]
+                     	this.bestNews= "Opposition party__'The President is trying to resolve inflation by making people poorer that is what we are not happy with'."
+
+                     } else if (this.randomNum==3) {
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "retailers__'The people have no money to buy our products. Maybe it is because of this high income tax.'"
+                     }else{
+                     	alert("hello President")
+                     }
+
+
+           }
+
+            				this.deficietMonitor()
+
+
+           
+
+           },
+           subtractagricopor: function () {
+
+
+          if (this.defence >= 0 && this.defence < 250000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $150 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-150000000
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge', but on the economics side government expenditure must be limited."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.A cyber criminal, hacked the Reserve accounts and stole $120 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-120000000
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of morden security checks at our airports and road blocks.The Reserve lost $170 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Our security is bad, now and then we are being outsmarted by criminals."
+                        this.cash= this.cash-170000000
+                     }else{
+                     	
+                     }
+                 }else if (this.defence >= 250000000 && this.defence < 500000000) {
+					this.rundomgenerator(13)
+
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $80 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-80000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge', but on the economics side government expenditure must be limited."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $50 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-50000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $100 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity2.jpg' alt='badSecurity2' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__The reserve lost $100 million today due to poor security."
+                        this.cash= this.cash-100000000
+                      }else{
+
+                     }
+                 }else  if (this.defence >= 500000000 && this.defence < 900000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $8 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-8000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge', but on the economics side inflation will rise government expenditure must be limited."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $5 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-5000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'."
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $10 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity3.jpg' alt='badSecurity3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk.??"
+                        this.cash= this.cash-10000000
+                       }else{
+
+                   }
+
+            }else if(this.defence>=900000000){
+           this.rundomgenerator(13)
+
+                           
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our strong defence and security.A mob led by some Political activits tried to break into CBD to cause violents but they were delt with throughly.")
+                     	
+			this.myNewsbetter= this.caltime()
+                    
+                     	this.betterNews= "Cityzens__'We are proud of security forces'. On the economics side inflation will rise business expenditure must be limited."
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='violents4.jpg' alt='violents4' width='80%'></div>"]
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate.Why use force?. On the economics side inflation will rise business expenditure must be limited."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. $50 million which was stolen under the former President was recovered and the Reserve got all of it.")
+                     	this.cash= this.cash+500000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of our defence security'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of the President strong funding in morden security checking points at our airports and road blocks.The Reserve recovered $100 million from smuggling")
+                     	this.bestNews= "zzc news__ Our security proves to be one of the best in the world. On the economics side inflation will rise business expenditure must be limited."
+                       }else{
+                        }
+                    }else{
+                    }
+
+
+
+          
+           
+
+           	this.coporate=(this.coporate)*1
+			if (this.coporate <= 0) {
+
+        this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "zzc news__Unemployment to improve after the President adopted the '0%' coporate tax."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsBbest= this.caltime()
+			this.businesslineImg=["<div><img src='production.jpg' alt='production' width='80%'></div>"]
+                     	this.BbestNews= "Business Tv__'Business expecting a rise in production'."
+
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsBbest= this.caltime()
+			this.businessImg=["<div><img src='production2.jpg' alt='production2' width='80%'></div>"]
+                     	this.BbestNews= "zzc news__'We have hope in the President' says the business comunity."
+                     }else{
+                     	alert("hello President")
+                     }
+
+
+
+               this.inflation= (this.inflation*1)+9
+               this.unemployment= (this.unemployment*1)-17
+               this.calMoneySupply(10)
+
+           }else if (this.coporate >2.9 && this.coporate<3.1) {
+           	this.cash=(this.cash*1)+20000000
+           	this.inflation= (this.inflation*1)+8
+           	this.unemployment= (this.unemployment*1)-15
+           	this.calMoneySupply(9)
+
+           }else if (this.coporate >4.9 && this.coporate<5.1) {
+           	this.cash=(this.cash*1)+30000000
+           	this.inflation= (this.inflation*1)+7
+           	this.unemployment= (this.unemployment*1)-13
+           	this.calMoneySupply(8)
+
+           }else if (this.coporate >6.9 && this.coporate<7.1) {
+                this.cash=(this.cash*1)+50000000
+                this.inflation= (this.inflation*1)+5
+                this.unemployment= (this.unemployment*1)-10
+                this.calMoneySupply(7)
+
+           }else if (this.coporate>9.9 && this.coporate<10.1) {
+           	   this.cash=(this.cash*1)+100000000
+               this.inflation= (this.inflation*1)+4
+               this.unemployment= (this.unemployment*1)-8
+               this.calMoneySupply(6)
+
+           }else if (this.coporate>12.9 && this.coporate<13.1) {
+           	   this.cash=(this.cash*1)+130000000
+               this.inflation= (this.inflation*1)+2
+               this.unemployment= (this.unemployment*1)-6
+               this.calMoneySupply(5)
+
+           }else if (this.coporate>14.9 && this.coporate<15.1) {
+            this.cash=(this.cash*1)+150000000
+           	this.inflation= (this.inflation*1)
+           	this.unemployment= (this.unemployment*1)-4
+           	this.calMoneySupply(4)
+
+
+           }else if (this.coporate>16.9 && this.coporate<17.1) {
+           	this.cash=(this.cash*1)+200000000
+           	this.inflation= (this.inflation*1)+3
+           	this.unemployment= (this.unemployment*1)-3
+           	this.calMoneySupply(3)
+
+           }else if (this.coporate> 19.9 && this.coporate<20.1){
+            this.cash=(this.cash*1)+180000000
+            this.unemployment= (this.unemployment*1)-2
+            this.inflation= (this.inflation*1)+5
+            this.calMoneySupply(2)
+
+           }else if (this.coporate>24.9 && this.coporate<25.1){
+               this.cash=(this.cash*1)+250000000
+               this.unemployment= (this.unemployment*1)-1
+               this.inflation= (this.inflation*1)+10
+               this.calMoneySupply(1)
+
+           }else if (this.coporate>29.9 && this.coporate<30.1){
+               this.cash=(this.cash*1)+350000000
+               this.unemployment= (this.unemployment*1)
+               this.inflation= (this.inflation*1)+13
+               this.calMoneySupply(0)
+
+           }else if (this.coporate>34.9 && this.coporate< 35.1){
+           	this.cash=(this.cash*1)+400000000
+           	this.unemployment= (this.unemployment*1)
+           	this.inflation= (this.inflation*1)+15
+           	this.calMoneySupply(0)
+
+           }else{
+           	this.cash=(this.cash*1)+700000000
+           	this.unemployment= (this.unemployment*1)
+           	this.inflation= (this.inflation*1)+20
+           	this.calMoneySupply(0)
+
+           }
+
+          
+
+
+          if (this.coporate > 19) {
+
+               this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "zzc news__High coporate tax boosts the Reserve."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+             	
+			this.myNewsBbest= this.caltime()
+			this.businessImg=["<div><img src='investors.jpg' alt='investors' width='80%'></div>"]
+                     	this.BbestNews= "business tv__'Is our coporate tax scaring away investors?'."
+
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "zzc news__Businesses continue to close due to low profit margin."
+                     }else{
+                     	alert("hello President")
+                     }
+
+
+          }
+
+
+          				this.deficietMonitor()
+
+
+           },
+
+           resubtractagricopor: function () {
+	          this.coporate=(this.coporate)*1
+			if (this.coporate <= 0) {
+               this.inflation= (this.inflation*1)-9
+               this.unemployment= (this.unemployment*1)+17
+               this.calMoneySupply(-10)
+            }else if (this.coporate >2.9 && this.coporate<3.1) {
+           	this.cash=(this.cash*1)-20000000
+           	this.inflation= (this.inflation*1)-8
+           	this.unemployment= (this.unemployment*1)+15
+           	this.calMoneySupply(-9)
+           }else if (this.coporate >4.9 && this.coporate<5.1) {
+           	this.cash=(this.cash*1)-30000000
+           	this.inflation= (this.inflation*1)-7
+           	this.unemployment= (this.unemployment*1)+13
+           	this.calMoneySupply(-8)
+           }else if (this.coporate >6.9 && this.coporate<7.1) {
+                this.cash=(this.cash*1)-50000000
+                this.inflation= (this.inflation*1)-5
+                this.unemployment= (this.unemployment*1)+10
+                this.calMoneySupply(-7)
+           }else if (this.coporate>9.9 && this.coporate<10.1) {
+           	   this.cash=(this.cash*1)-100000000
+               this.inflation= (this.inflation*1)-4
+               this.unemployment= (this.unemployment*1)+8
+               this.calMoneySupply(-6)
+            }else if (this.coporate>12.9 && this.coporate<13.1) {
+           	   this.cash=(this.cash*1)-130000000
+               this.inflation= (this.inflation*1)-2
+               this.unemployment= (this.unemployment*1)+6
+               this.calMoneySupply(-5)
+           }else if (this.coporate>14.9 && this.coporate<15.1) {
+            this.cash=(this.cash*1)-150000000
+           	this.inflation= (this.inflation*1)
+           	this.unemployment= (this.unemployment*1)+4
+           	this.calMoneySupply(-4)
+           }else if (this.coporate>16.9 && this.coporate<17.1) {
+           	this.cash=(this.cash*1)-200000000
+           	this.inflation= (this.inflation*1)-3
+           	this.unemployment= (this.unemployment*1)+3
+           	this.calMoneySupply(-3)
+           }else if (this.coporate> 19.9 && this.coporate<20.1){
+            this.cash=(this.cash*1)-180000000
+            this.unemployment= (this.unemployment*1)+2
+            this.inflation= (this.inflation*1)-5
+            this.calMoneySupply(-2)
+           }else if (this.coporate>24.9 && this.coporate<25.1){
+               this.cash=(this.cash*1)-250000000
+               this.unemployment= (this.unemployment*1)+1
+               this.inflation= (this.inflation*1)-10
+               this.calMoneySupply(-1)
+           }else if (this.coporate>29.9 && this.coporate<30.1){
+               this.cash=(this.cash*1)-350000000
+               this.unemployment= (this.unemployment*1)
+               this.inflation= (this.inflation*1)-13
+               this.calMoneySupply(0)
+           }else if (this.coporate>34.9 && this.coporate< 35.1){
+           	this.cash=(this.cash*1)-400000000
+           	this.unemployment= (this.unemployment*1)
+           	this.inflation= (this.inflation*1)-15
+           	this.calMoneySupply(0)
+           }else{
+           	this.cash=(this.cash*1)-700000000
+           	this.unemployment= (this.unemployment*1)
+           	this.inflation= (this.inflation*1)-20
+           	this.calMoneySupply(0)
+           }	
+           return this.coporate=0
+           },
+
+           resubtractagriinc: function () {
+           this.income=(this.income)*1
+			if (this.income <= 0) {
+            this.inflation= (this.inflation*1)-20
+            this.calMoneySupply(-10)
+
+           }else if (this.income > 1.9 && this.income < 2.1) {
+           	this.inflation= (this.inflation*1)-15
+           	this.cash= (this.cash*1)-10000000
+           	this.calMoneySupply(-9)
+
+           }else if (this.income > 4.9 && this.income < 5.1) {
+            this.cash=(this.cash*1)-30000000
+            this.inflation= (this.inflation*1)-10
+            this.calMoneySupply(-8)
+
+           }else if (this.income > 6.9 && this.income < 7.1) {
+       	    this.cash=(this.cash*1)-5000000
+       	    this.inflation= (this.inflation*1)-8
+       	    this.calMoneySupply(-7)
+           }else if (this.income >9.9 && this.income < 10.1) {
+            this.cash=(this.cash*1)-80000000
+           	this.inflation= (this.inflation*1)-4
+           	this.calMoneySupply(-6)
+           }else if (this.income >12.9 && this.income<13.1) {
+           	this.cash=(this.cash*1)-150000000
+           	this.inflation= (this.inflation*1)+3
+           	this.calMoneySupply(-5)
+           }else if (this.income >14.9 && this.income<15.1) {
+            this.cash=(this.cash*1)-180000000
+            this.unemployment= (this.unemployment*1)-2
+            this.inflation= (this.inflation*1)+7
+            this.calMoneySupply(-4)
+           }else if (this.income>16.9 && this.income<17.1){
+            this.cash=(this.cash*1)-200000000
+            this.unemployment= (this.unemployment*1)-4
+            this.inflation= (this.inflation*1)+10
+            this.calMoneySupply(-3)
+           }else if (this.income>19.9 && this.income< 20.1){
+            this.cash=(this.cash*1)-230000000
+            this.unemployment= (this.unemployment*1)-6
+            this.inflation= (this.inflation*1)+12
+            this.calMoneySupply(-2)
+           }else if (this.income>24.9 && this.income <25.1){
+           	this.cash=(this.cash*1)-300000000
+           	this.unemployment= (this.unemployment*1)-5
+           	this.inflation= (this.inflation*1)+16
+           	this.calMoneySupply(-1)
+           }else{
+           	this.cash=(this.cash*1)-350000000
+           	this.unemployment= (this.unemployment*1)-10
+           	this.inflation= (this.inflation*1)+20
+           	this.calMoneySupply(0)
+           }
+           return this.income=0
+           },
+
+			resubtractagriH: function () {
+				// body...
+			this.cash= this.cash+(this.health*1)
+			 if (this.health<100000000) {
+               this.unemployment= (this.unemployment*1)+1
+               this.calMoneySupply(-1)
+           } else if (this.health>=100000000 && this.health<200000000) {
+           	this.unemployment=(this.unemployment*1)+2
+           	this.calMoneySupply(-2)
+           } else if (this.health>=200000000 && this.health<300000000) {
+                this.unemployment= (this.unemployment*1)+3
+                this.inflation= (this.inflation*1)-1
+                this.calMoneySupply(-3)
+           }else if (this.health>=300000000 && this.health <400000000) {
+               this.unemployment= (this.unemployment*1)+4
+               this.inflation= (this.inflation*1)-2
+               this.calMoneySupply(-4)
+           }else if (this.health>=400000000 && this.health <500000000) {
+           	this.unemployment= (this.unemployment*1)+5
+           	this.inflation= (this.inflation*1)-4
+           	this.calMoneySupply(-5)
+           }else if (this.health>=500000000 && this.health <600000000) {
+           	this.unemployment= (this.unemployment*1)+6
+           	this.inflation= (this.inflation*1)-5
+           	this.calMoneySupply(-6)
+           }else{
+               this.unemployment= this.unemployment+7
+               this.inflation= (this.inflation*1)-8
+               this.calMoneySupply(-8)
+           }
+                this.hhConvertor=""
+                this.hhtype=""
+				return this.health= 0
+		},
+			resubtractagriA: function () {
+				// body...
+			this.cash= this.cash+(this.agricalture*1)
+		   if (this.agricalture<100000000) {
+               this.unemployment= this.unemployment+1
+               this.inflation= (this.inflation*1)-0.5
+               this.calMoneySupply(-1)
+           } else if (this.agricalture>=100000000 && this.agricalture<200000000) {
+           	this.unemployment=this.unemployment+2
+           	this.inflation= (this.inflation*1)-1
+           	this.calMoneySupply(-2)
+           } else if (this.agricalture>=200000000 && this.agricalture<300000000) {
+                this.unemployment= this.unemployment+3
+                this.inflation= (this.inflation*1)-1.5
+                this.calMoneySupply(-3)
+           }else if (this.agricalture>=300000000 && this.agricalture <400000000) {
+               this.unemployment= this.unemployment+4
+               this.inflation= (this.inflation*1)-2
+               this.calMoneySupply(-4)
+           }else if (this.agricalture>=400000000 && this.agricalture <500000000) {
+           	this.unemployment= this.unemployment+5
+           	this.inflation= (this.inflation*1)-2.5
+           	this.calMoneySupply(-5)
+           }else if (this.agricalture>=500000000 && this.agricalture <600000000) {
+           	this.unemployment= this.unemployment+6
+           	this.inflation= (this.inflation*1)-3
+           	this.calMoneySupply(-6)
+           }else if (this.agricalture>=600000000 && this.agricalture <700000000) {
+               this.unemployment= this.unemployment+7
+               this.inflation= (this.inflation*1)-3.5
+               this.calMoneySupply(-7)
+           }else if (this.agricalture>=700000000 && this.agricalture <800000000) {
+
+           	this.unemployment= this.unemployment+8
+           	this.inflation= (this.inflation*1)-4
+           	this.calMoneySupply(-8)
+           }else if (this.agricalture>=800000000 && this.agricalture <900000000) {
+            this.unemployment= this.unemployment+9
+           	this.inflation= (this.inflation*1)-4.5
+           	this.calMoneySupply(-9)
+           }else{
+           	this.unemployment= this.unemployment+10
+           	this.inflation= (this.inflation*1)-5
+           	this.calMoneySupply(-10)
+           }
+                this.aaConvertor= ""
+                this.aatype= ""
+				return this.agricalture= 0
+			},
+			resubtractagriD: function () {
+				// body...
+				this.cash= this.cash+(this.defence*1)
+			 if (this.defence<100000000) {
+               this.unemployment= this.unemployment-0
+               this.inflation= (this.inflation*1)-1
+               this.calMoneySupply(-1)
+           } else if (this.defence>=100000000 && this.defence<200000000) {
+           	this.unemployment=this.unemployment-0
+           	this.inflation= (this.inflation*1)-2
+           	this.calMoneySupply(-2)
+           } else if (this.defence>=200000000 && this.defence<300000000) {
+                this.unemployment= this.unemployment-0
+                this.inflation= (this.inflation*1)-3
+                this.calMoneySupply(-3)
+           }else if (this.defence>=300000000 && this.defence <400000000) {
+               this.unemployment= this.unemployment-0
+               this.inflation= (this.inflation*1)-4
+               this.calMoneySupply(-4)
+           }else if (this.defence>=400000000 && this.defence <700000000) {
+           	this.unemployment= this.unemployment+1
+           	if (this.defence>500000000) {
+           		this.inflation= (this.inflation*1)-8
+           		this.calMoneySupply(-4.5)
+           	}
+           	this.calMoneySupply(-5)
+           }else if (this.defence>=700000000 && this.defence <900000000) {
+           	this.unemployment= this.unemployment+2
+           	this.inflation= (this.inflation*1)-15
+           	this.calMoneySupply(-6)
+
+           }else{
+               this.unemployment= this.unemployment+3
+               this.inflation= (this.inflation*1)-20
+               this.calMoneySupply(-8)
+           }
+                this.ddConvertor= ""
+                this.ddtype=""
+				return this.defence= 0
+			},
+			resubtractagriE: function () {
+				// body...
+				this.cash= this.cash+(this.education*1)
+			if (this.education<100000000) {
+               this.unemployment= this.unemployment+1
+           
+           } else if (this.education>=100000000 && this.education<200000000) {
+           	this.unemployment=this.unemployment+2
+           	this.calMoneySupply(-1)
+           } else if (this.education>=200000000 && this.education<300000000) {
+                this.unemployment= this.unemployment+3
+                this.inflation= (this.inflation*1)-1
+                this.calMoneySupply(-2)
+           }else if (this.education>=300000000 && this.education <400000000) {
+               this.unemployment= this.unemployment+4
+               this.inflation= this.inflation-3
+               this.calMoneySupply(-3)
+           }else if (this.education>=400000000 && this.education <500000000) {
+           	this.unemployment= this.unemployment+5
+           	this.inflation= (this.inflation*1)-4
+           	this.calMoneySupply(-4)
+           }else if (this.education>=500000000 && this.education <600000000) {
+           	this.unemployment= this.unemployment+6
+           	this.inflation= (this.inflation*1)-5
+           	this.calMoneySupply(-5)
+           }else{
+               this.unemployment= this.unemployment+7
+               this.inflation= (this.inflation*1)-8
+               this.calMoneySupply(-7.5)
+           }
+                this.eeConvertor= ""
+                this.eetype=""
+				return this.education= 0
+			},
+			resubtractagriI: function () {
+				// body...
+			this.cash= this.cash+(this.infrastracture*1)
+            if (this.infrastracture<=100000000 && this.infrastracture<150000000) {
+               this.unemployment= this.unemployment+1
+               this.inflation= (this.inflation*1)-0.5
+               this.calMoneySupply(-1)
+           } else if (this.infrastracture>=150000000 && this.infrastracture<200000000) {
+           	this.unemployment=this.unemployment+3
+           	this.inflation= (this.inflation*1)-1.5
+           	this.calMoneySupply(-2)
+           } else if (this.infrastracture>=200000000 && this.infrastracture<300000000) {
+                this.unemployment= this.unemployment+4
+                this.inflation= (this.inflation*1)-2
+                this.calMoneySupply(-3)
+           }else if (this.infrastracture>=300000000 && this.infrastracture <400000000) {
+               this.unemployment= this.unemployment+5
+               this.inflation= (this.inflation*1)-2.5
+               this.calMoneySupply(-4)
+           }else if (this.infrastracture>=400000000 && this.infrastracture <550000000) {
+           	this.unemployment= this.unemployment+6
+           	this.inflation= (this.inflation*1)-3
+           	this.calMoneySupply(-5)
+           }else if (this.infrastracture>=550000000 && this.infrastracture <600000000) {
+           	this.unemployment= this.unemployment+8
+           	this.inflation= (this.inflation*1)-4
+           	this.calMoneySupply(-6)
+           }else if (this.agricalture>=600000000 && this.infrastracture <700000000) {
+            this.unemployment= this.unemployment+10
+            this.inflation= (this.inflation*1)-5
+            this.calMoneySupply(-7)
+           }else if (this.infrastracture>800000000 && this.infrastracture <850000000){
+               this.infrastracture= this.infrastracture+12
+               this.inflation= (this.inflation*1)-6
+               this.calMoneySupply(-8)
+           }else if (this.infrastracture>=850000000 && this.infrastracture <900000000){
+               this.unemployment= this.unemployment+15
+               this.inflation= (this.inflation*1)-7.5
+               this.calMoneySupply(-9)
+           }else{
+           	this.unemployment= this.unemployment+18
+           	this.inflation= (this.inflation*1)-10
+           	this.calMoneySupply(-10)
+           }
+                this.iiConvertor=""
+                this.iitype=""
+				return this.infrastracture= 0
+			},
+			subtractagriH: function () {
+			 this.cash= this.cash-(this.health*1)
+
+ if (this.defence >= 0 && this.defence < 250000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $150 million.The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-150000000
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.A cyber criminal, hacked the Reserve accounts and stole $120 million.The Reserve lost a lot.")
+                     	this.cash= this.cash-120000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of morden security checks at our airports and road blocks.The Reserve lost $170 million to smuggling")
+
+
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity4.jpg' alt='badSecurity4' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Our security in verybad shape."
+                        this.cash= this.cash-170000000
+                     }else{
+                     	
+                     }
+                 }else if (this.defence >= 250000000 && this.defence < 500000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted properties worth $80 million.The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-80000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $50 million.The Reserve lost a lot.")
+                     	this.cash= this.cash-50000000
+
+                     
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $100 million to smuggling")
+                     	this.bestNews= "sstudio 77__Is our security at risk.??"
+                     	this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+
+                     	
+			this.myNewsbest= this.caltime()
+                        this.cash= this.cash-100000000
+                      }else{
+
+                     }
+                 }else  if (this.defence >= 500000000 && this.defence < 900000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $8 million.The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-8000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $5 million.The Reserve lost a lot.")
+                     	this.cash= this.cash-5000000
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $10 million to smuggling")
+
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "security force__we're facing serious financial challenges?"
+                        this.cash= this.cash-10000000
+                       }else{
+
+                   }
+
+            }else if(this.defence>=900000000){
+           this.rundomgenerator(13)
+
+                           
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. A Political terrorist was captured today.")
+
+                     	
+			this.myNewsbetter= this.caltime()
+                    
+                     	this.betterNews= "Cityzens__'We are proud of security forces'."
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate.Why use force?. On the economics side inflation will rise government expenditure must be limited."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. $50 000 000 which was stolen under the former President was recovered and the Reserve got all of it.")
+                     	this.cash= this.cash+500000000
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of our defence security'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of the President strong funding in morden security checking points at our airports and road blocks.The Reserve recovered $100 000 000 from smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='goodSecurity.jpg' alt='goodSecurity' width='80%'></div>"]
+                     	this.bestNews= "zzc news__ Our security proves to be one of the best in the world."
+                       }else{
+                        }
+                    }else{
+                    }
+
+
+
+
+           if (this.health<100000000) {
+               this.unemployment= this.unemployment-1
+
+
+            this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='demostrations2.jpg' alt='demostrations2' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Heath workers promise to strike for better salaries and working conditions."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsbest2= this.caltime()
+			//this.headlineImg=["<div><img src='health.jpg' alt='health' width='80%'></div>"]
+                     	this.bestNews2= "Opposition party__'Health is a basic human right hence it should be treated with respect'"
+                     } else if (this.randomNum==3) {
+
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "zzc news__Health workers told to resume work or face serious action."
+
+                     }else{
+                     	alert("hello President")
+                     }
+
+            this.calMoneySupply(1)
+
+           } else if (this.health>=100000000 && this.health<200000000) {
+           	this.unemployment=this.unemployment-2
+
+
+           	this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='health2.jpg' alt='health2' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Heath workers promise to strike for better salaries and working conditions."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews2= "Opposition party__'Health is a basic human right hence it should be treated with respect'"
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "zzc news__Health workers told to resume work or face serious action. The government not willing to spend more, for the sake of inflation."
+
+                     }else{
+                     	alert("hello President")
+                     }
+                     this.calMoneySupply(2)
+
+           } else if (this.health>=200000000 && this.health<300000000) {
+                this.unemployment= this.unemployment-3
+                this.inflation= (this.inflation*1)+1
+                 this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='health3.jpg' alt='health3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Medicine and poor health facilities a big problem indeed."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+			this.myNewsbest2= this.caltime()
+                     	this.bestNews2= "Opposition party__'Health is a basic human right hence it should be treated with respect'"
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "zzc news__Health workers told to resume work or face serious action. The government not willing to spend more, for the sake of inflation."
+
+                     }else{
+                     	alert("hello President")
+                     }
+             this.calMoneySupply(3)
+           }else if (this.health>=300000000 && this.health <400000000) {
+               this.unemployment= this.unemployment-4
+               this.inflation= (this.inflation*1)+2
+                this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='health3.jpg' alt='health3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Health workers promise to strike for better salaries and working conditions."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+			this.myNewsbest2= this.caltime()
+                     	this.bestNews2= "Opposition party__'Health is a basic human right hence it should be treated with respect'"
+                     } else if (this.randomNum==3) {
+
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "zzc news__Health workers told to resume work or face serious action. The government not willing to spend more, for the sake of inflation."
+
+                     }else{
+                     	alert("hello President")
+                     }
+                     this.calMoneySupply(4)
+
+           }else if (this.health>=400000000 && this.health <500000000) {
+           	this.unemployment= this.unemployment-5
+           	this.inflation= (this.inflation*1)+4
+           	this.calMoneySupply(5)
+           }else if (this.health>=500000000 && this.health <600000000) {
+           	this.unemployment= this.unemployment-6
+           	this.inflation= (this.inflation*1)+5
+           	this.calMoneySupply(6)
+           }else{
+               this.unemployment= this.unemployment-7
+               this.inflation= (this.inflation*1)+8
+               this.calMoneySupply(8)
+            }
+
+          this.deficietMonitor()
+          
+
+            },
+			subtractagriE: function () {
+			 this.cash= this.cash-(this.education*1)
+
+             if (this.defence >= 0 && this.defence < 250000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $150 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-150000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge to us all'."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.A cyber criminal, hacked the Reserve accounts and stole $120 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-120000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of morden security checks at our airports and road blocks.The Reserve lost $170 million to smuggling")
+                     
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Our security is not good at all."
+                        this.cash= this.cash-170000000
+                     }else{
+                     	
+                     }
+                 }else if (this.defence >= 250000000 && this.defence < 500000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $80 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-80000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $50 million. The Reserve lost a lot today president.")
+                     	this.cash= this.cash-50000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $100 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity3.jpg' alt='badSecurity3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk?."
+                        this.cash= this.cash-100000000
+                      }else{
+
+                     }
+                 }else  if (this.defence >= 500000000 && this.defence < 900000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted properties worth $8 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-8000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $5 million.The Reserve lost a lot.")
+                     	this.cash= this.cash-5000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'."
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $10 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity2.jpg' alt='badSecurity2' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk?."
+                        this.cash= this.cash-10000000
+                       }else{
+
+                   }
+
+            }else if(this.defence>=900000000){
+                  this.rundomgenerator(13)
+
+                           
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our strong defence and security.Some violent youth led by the Opposition party tried to undertake an illigal demostration but they were delt with throughly.")
+                    
+                        
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Local economist__'We are proud of security forces'. On the economics side inflation will rise government expenditure must be limited."
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='violents3.jpg' alt='violents3' width='80%'></div>"]
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate.Why use force??."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. $50 million which was stolen under the former President was recovered and the Reserve got all of it.")
+                     	this.cash= this.cash+500000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of our defence security'. On the economics side inflation will rise government expenditure must be limited."
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of the President strong funding in morden security checking points at our airports and road blocks.The Reserve recovered $100 million from smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='goodSecurity.jpg' alt='goodSecurity' width='80%'></div>"]
+                     	this.bestNews= "zzc news__ Our security proves to be one of the best in the world"
+                       }else{
+                        }
+                    }else{
+                    }
+
+
+            if (this.education<100000000) {
+               this.unemployment= this.unemployment-1
+
+
+            this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "sstudio 77__Teachers promise to strike for better salaries and working conditions."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsbest2= this.caltime()
+                     	this.bestNews2= "Opposition party__'Education is a basic right hence it should be treated with respect'."
+                     } else if (this.randomNum==3) {
+
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "zzc news__Teachers told to resume work or face serious action. The government not willing to spend more, for the sake of inflation."
+
+                     }else{
+                     	alert("hello President")
+                     }
+     
+           } else if (this.education>=100000000 && this.education<200000000) {
+           	this.unemployment=this.unemployment-2
+
+
+        this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "sstudio 77__Teachers promise to strike for better salaries and working conditions."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsbest2= this.caltime()
+                     	this.bestNews2= "Opposition party__'Education is a basic right hence it should be treated with respect'. The government not willing to spend more, for the sake of inflation."
+                     } else if (this.randomNum==3) {
+
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "zzc news__Teachers told to resume work or face serious action. The government not willing to spend more, for the sake of inflation."
+
+                     }else{
+                     	alert("hello President")
+                     }
+            this.calMoneySupply(1)
+
+           } else if (this.education>=200000000 && this.education<300000000) {
+                this.unemployment= this.unemployment-3
+                this.inflation= (this.inflation*1)+1
+                 this.rundomgenerator(4)
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "sstudio 77__Teachers promise to strike for better salaries and working conditions."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	this.bestNews2= "Opposition party__'Education is a basic right hence it should be treated with respect'. The government not willing to spend more, for the sake of inflation."
+
+                     	
+			this.myNewsbest2= this.caltime()
+
+                     } else if (this.randomNum==3) {
+
+                       
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "zzc news__Teachers told to resume work or face serious action. The government not willing to spend more, for the sake of inflation."
+
+                     }else{
+                     	alert("hello President")
+                     }
+
+           this.calMoneySupply(2)
+           }else if (this.education>=300000000 && this.education <400000000) {
+               this.unemployment= this.unemployment-4
+
+                this.inflation= this.inflation+3
+
+                this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "sstudio 77__Is our education system still one of the best with such low funding?."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	
+			this.myNewsbest2= this.caltime()
+                     	this.bestNews2= "Opposition party__'There are absolutly no books in schools, no meaningful researchs and the academic infrastracture is very poor the President need to be more serious.'"
+                     } else if (this.randomNum==3) {
+                     	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "zzc news__Teachers told to resume work or face serious action. The government not willing to spend more, for the sake of inflation."
+
+                     }else{
+                     	alert("hello President")
+                     }
+                     this.calMoneySupply(3)
+           }else if (this.education>=400000000 && this.education <500000000) {
+           	this.unemployment= this.unemployment-5
+           	this.inflation= (this.inflation*1)+4
+           	this.calMoneySupply(4)
+           }else if (this.education>=500000000 && this.education <600000000) {
+           	this.unemployment= this.unemployment-6
+           	this.inflation= (this.inflation*1)+5
+           	this.calMoneySupply(5)
+           }else{
+               this.unemployment= this.unemployment-7
+               this.inflation= (this.inflation*1)+8
+               this.calMoneySupply(7.5)
+
+             }
+
+         				this.deficietMonitor()
+
+
+			},
+			subtractagriA: function () {
+			 this.cash= this.cash-(this.agricalture*1)
+
+
+			  if (this.defence >= 0 && this.defence < 250000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $150 million.The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-150000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.A cyber criminal, hacked the Reserve accounts and stole $120 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-120000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of morden security checks at our airports and road blocks.The Reserve lost $170 million to smuggling")
+
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk.?"
+                        this.cash= this.cash-170000000
+                     }else{
+                     	
+                     }
+                 }else if (this.defence >= 250000000 && this.defence < 500000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $80 million.The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-80000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $50 million.The Reserve lost a lot.")
+                     	this.cash= this.cash-50000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $100 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity2.jpg' alt='badSecurity2' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk.??"
+                        this.cash= this.cash-100000000
+                      }else{
+
+                     }
+                 }else  if (this.defence >= 500000000 && this.defence < 900000000) {
+					this.rundomgenerator(13)
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $8 million.The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-8000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $5 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-5000000
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $10 million to smuggling")
+                     	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk.?"
+                        this.cash= this.cash-10000000
+                       }else{
+
+                   }
+
+            }else if(this.defence>=900000000){
+
+              this.rundomgenerator(13)
+
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our strong defence and security.Some violent youth led by the Opposition party tried to cause civi unrest but they were delt with throughly.")
+                    
+                     	this.betterNews= "Local economist__'We are proud of security forces'. On the economics side inflation will rise government expenditure must be limited."
+
+                     	
+			this.myNewsbetter= this.caltime()
+			this.bestNews= this.myNewsbetter
+
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate.Why use force?."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. $50 million which was stolen under the former President was recovered and the Reserve got all of it.")
+                     	this.cash= this.cash+500000000
+
+                     	
+			this.myNewsbetter= this.caltime()
+
+                     	this.betterNews= "Cityzens__'We are proud of our defence security'. On the economics side inflation will rise government expenditure must be limited."
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of the President strong funding in morden security checking points at our airports and road blocks.The Reserve recovered $100 million from smuggling")
+    
+                         	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='goodSecurity3.jpg' alt='badSecurity3' width='80%'></div>"]
+                     	this.bestNews= "zzc news__ Our security proves to be one of the best in the world."
+                       }else{
+                        }
+                    }else{
+                    }
+
+
+
+             
+
+
+
+			 if (this.agricalture<100000000) {
+               this.unemployment= this.unemployment-1
+               this.inflation= (this.inflation*1)+0.5
+               this.calMoneySupply(1)
+           } else if (this.agricalture>=100000000 && this.agricalture<200000000) {
+           	this.unemployment=this.unemployment-2
+           	this.inflation= (this.inflation*1)+1
+           	this.calMoneySupply(2)
+           } else if (this.agricalture>=200000000 && this.agricalture<300000000) {
+                this.unemployment= this.unemployment-3
+                this.inflation= (this.inflation*1)+1.5
+                this.calMoneySupply(3)
+           }else if (this.agricalture>=300000000 && this.agricalture <400000000) {
+               this.unemployment= this.unemployment-4
+               this.inflation= (this.inflation*1)+2
+               this.calMoneySupply(4)
+           }else if (this.agricalture>=400000000 && this.agricalture <500000000) {
+           	this.unemployment= this.unemployment-5
+           	this.inflation= (this.inflation*1)+2.5
+           	this.calMoneySupply(5)
+           }else if (this.agricalture>=500000000 && this.agricalture <600000000) {
+           	this.unemployment= this.unemployment-6
+           	this.inflation= (this.inflation*1)+3
+           	this.calMoneySupply(6)
+           }else if (this.agricalture>=600000000 && this.agricalture <700000000) {
+            this.unemployment= this.unemployment-7
+            this.inflation= (this.inflation*1)+3.5
+            this.calMoneySupply(7)
+           }else if (this.agricalture>=700000000 && this.agricalture <800000000){
+               this.unemployment= this.unemployment-8
+               this.inflation= (this.inflation*1)+4
+               this.calMoneySupply(8)
+           }else if (this.agricalture>=800000000 && this.agricalture <900000000){
+               this.unemployment= this.unemployment-9
+               this.inflation= (this.inflation*1)+4.5
+               this.calMoneySupply(9)
+           }else{
+           	this.unemployment= this.unemployment-10
+           	this.inflation= (this.inflation*1)+5
+           	this.calMoneySupply(10)
+           }
+
+
+
+
+
+
+         if (this.agricalture< 300000000) {
+         	 this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='agricalture.jpg' alt='agricalture' width='80%'></div>"]
+                     	this.bestNews= "zzc news__Famers cry for government support"
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	 	
+			this.myNewsworse2= this.caltime()
+                     	this.worseNews2= "Opposition party__'Hunger and inflation is on its way if the President continues to neglect agricalture.'"
+                     } else if (this.randomNum==3) {
+                     	 	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "Businesses__Actually our raw matrials are expensive that is why we are raising our prices. Agricalture requires better funding."
+
+                     }else{
+                     	alert("hello President")
+                     }
+         	
+         }else if (this.agricalture>=300000000 && this.agricalture<400000000) {
+         	this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+
+
+                     	 	
+			this.myNewsbest2= this.caltime()
+                     	this.bestNews2= "zzc news__Famers cry for government support"
+                       
+                     } else if (this.randomNum==2) {
+                     	
+
+                     	 	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "Opposition party__'Agricalture needs more funding for the sake of our industries and food security'."
+                     } else if (this.randomNum==3) {
+
+                     	 	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "Economists__Actually our raw matrials are expensive that's why you see sharp price increase. Agricalture is being neglected."
+
+                     }else{
+                     	alert("hello President")
+                     }
+         }else{
+
+         }
+
+
+				this.deficietMonitor()
+
+			},
+			subtractagriI: function () {
+			this.cash= this.cash-(this.infrastracture*1)
+
+
+
+ if (this.defence >= 0 && this.defence < 250000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $150 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-150000000
+
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.A cyber criminal, hacked the Reserve accounts and stole $120 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-120000000
+
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of morden security checks at our airports and road blocks.The Reserve lost $170 million to smuggling")
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "zcc news__Our security need some checking. $170 million reported to be missing."
+                        this.cash= this.cash-170000000
+                     }else{
+                     	
+                     }
+                 }else if (this.defence >= 250000000 && this.defence < 500000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $80 million. The Reserve has paid this money to repair the damage.")
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.cash= this.cash-80000000
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $50 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-50000000
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $100 million to smuggling")
+
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity3.jpg' alt='badSecurity3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk.?"
+                        this.cash= this.cash-100000000
+                      }else{
+
+                     }
+                 }else  if (this.defence >= 500000000 && this.defence < 900000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $8 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-8000000
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $5 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-5000000
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $10 million to smuggling")
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity2.jpg' alt='badSecurity2' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Our security is screaming for help."
+                        this.cash= this.cash-10000000
+                       }else{
+
+                   }
+
+            }else if(this.defence>=900000000){
+           this.rundomgenerator(13)
+                           
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. Our country has been ranked among the top 10 most secure countries in the world.")
+                    
+
+                     	
+			this.myNewsbetter= this.caltime()
+
+                     	this.betterNews= "Cityzens__'We are proud of security forces'."
+
+                   this.myNewsbest= this.myNewsbetter
+
+                   this.headlineImg=["<div><img src='violents.jpg' alt='violents' width='80%'></div>"]
+
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate.Why use force??."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. $50 million which was stolen under the former President was recovered and the Reserve got all of it.")
+                     	this.cash= this.cash+500000000
+
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of our defence security'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of the President strong funding in morden security checking points at our airports and road blocks.The Reserve recovered $100 million from smuggling")
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='goodSecurity3.jpg' alt='goodSecurity3' width='80%'></div>"]
+                     	this.bestNews= "zzc news__ Our security proves to be one of the best in the world"
+                       }else{
+                        }
+                    }else{
+                    }
+          
+
+
+			if (this.infrastracture<=100000000 && this.infrastracture<150000000) {
+                this.unemployment= this.unemployment-1
+               this.inflation= (this.inflation*1)+0.5
+               this.calMoneySupply(1)
+
+           } else if (this.infrastracture>=150000000 && this.infrastracture<200000000) {
+           	this.unemployment=this.unemployment-3  
+             this.inflation= (this.inflation*1)+1.5
+            this.calMoneySupply(2)
+           } else if (this.infrastracture>=200000000 && this.infrastracture<300000000) {
+                this.unemployment= this.unemployment-4
+                this.inflation= (this.inflation*1)+2
+                this.calMoneySupply(3)
+           }else if (this.infrastracture>=300000000 && this.infrastracture <400000000) {
+               this.unemployment= this.unemployment-5
+               this.inflation= (this.inflation*1)+2.5
+               this.calMoneySupply(4)
+           }else if (this.infrastracture>=400000000 && this.infrastracture <550000000) {
+           	this.unemployment= this.unemployment-6
+           	this.inflation= (this.inflation*1)+3
+           	this.calMoneySupply(5)
+           }else if (this.infrastracture>=550000000 && this.infrastracture <600000000) {
+           	this.unemployment= this.unemployment-8
+           	this.inflation= (this.inflation*1)+4
+           	this.calMoneySupply(6)
+           }else if (this.agricalture>=600000000 && this.infrastracture <700000000) {
+            this.unemployment= this.unemployment-10
+            this.inflation= (this.inflation*1)+5
+            this.calMoneySupply(7)
+           }else if (this.infrastracture>800000000 && this.infrastracture <850000000){
+            this.unemployment= this.unemployment-12
+            this.inflation= (this.inflation*1)+6
+            this.calMoneySupply(8)
+           }else if (this.infrastracture>=850000000 && this.infrastracture <900000000){
+            this.unemployment= this.unemployment-15
+            this.inflation= (this.inflation*1)+7.5
+            this.calMoneySupply(9)
+           }else{
+           	this.unemployment= this.unemployment-18
+           	this.inflation= (this.inflation*1)+10
+           	this.calMoneySupply(10)
+           }
+
+            this.deficietMonitor()
+            
+
+          if (this.infrastracture<300000000) {
+
+
+          	this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	 	
+			this.myNewsBbest= this.caltime()
+			this.businessImg=["<div><img src='badbusiness.jpg' alt='badbusiness' width='80%'></div>"]
+                     	this.BbestNews= "sstudio 77__Businesses cry for government support. The government not willing to spend more, for the sake of inflation."
+                       
+                     } else if (this.randomNum==2) {
+                     	                     	 	
+			this.myNewsworse= this.caltime()
+                     	this.worseNews= "Opposition party__'High unemployment and inflation is on its way if the President continues to neglect our Industry and commerce. The government not willing to spend more, for the sake of inflation.'"
+                     } else if (this.randomNum==3) {
+
+                     	 	
+			this.myNewsBworse= this.caltime()
+                     	this.BworseNews= "zzc news__Businesses: 'the raw matrials are expensive that's why we are raising our prices. We need more funding'."
+
+                     }else{
+                     	alert("hello President")
+                     }
+
+          } else if(this.infrastracture >= 300000000 && this.infrastracture < 500000000){
+
+
+          	this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	 	
+			this.myNewsBbest= this.caltime()
+			this.businessImg=["<div><img src='badbusiness2.jpg' alt='badbusiness2' width='80%'></div>"]
+                     	this.BbestNews= "zzc news__Businesses welcomes government fundinding but said it was not enough."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	 	
+			this.myNewsworse2= this.caltime()
+                     	this.worseNews2= "Opposition party__'Obviously unemployment is on its way if the President continues to neglect Industry and commerce. The government not willing to spend more, for the sake of inflation.'"
+                     } else if (this.randomNum==3) {
+                     	 	
+			this.myNewsBbetter= this.caltime()
+                     	this.BbetterNews= "zzc news__Producers:'actually our raw matrials are expensive thats why we are raising our prices'."
+
+                     }else{
+                     	alert("hello President")
+                     }
+
+          }
+
+
+
+			},
+			subtractagriD: function () {
+			 this.cash= this.cash-(this.defence*1)
+
+
+ if (this.defence >= 0 && this.defence < 250000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.Some violent youth led by the Opposition party, destroyed and looted properties worth $150 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-150000000
+
+                     	 
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'"
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our poor defence and security.A cyber criminal, hacked the Reserve accounts and stole $120 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-120000000
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of morden security checks at our airports and road blocks.The Reserve lost $170 million to smuggling")
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__'Is there safety out there?' says the cityzens."
+                        this.cash= this.cash-170000000
+                     }else{
+                     	
+                     }
+                 }else if (this.defence >= 250000000 && this.defence < 500000000) {
+					this.rundomgenerator(13)
+             
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted properties worth $80 million.The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-80000000
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $50 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-50000000
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $100 million to smuggling")
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity4.jpg' alt='badSecurity4' width='80%'></div>"]
+                     	this.bestNews= "zcc news__Is our security this bad?."
+                        this.cash= this.cash-100000000
+                      }else{
+
+                     }
+                 }else  if (this.defence >= 500000000 && this.defence < 900000000) {
+					this.rundomgenerator(13)
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.Some violent youth led by the Opposition party, destroyed and looted some properties worth $8 million. The Reserve has paid this money to repair the damage.")
+                     	this.cash= this.cash-8000000
+                     	 
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'Poor defence and security a very big challenge'."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our lack of funding in defence and security.A cyber criminal, hacked the Reserve accounts and stole $5 million. The Reserve lost a lot.")
+                     	this.cash= this.cash-5000000
+                     	 
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of our lack of funding in morden security checks at our airports and road blocks.The Reserve lost $10 million to smuggling")
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk?."
+                        this.cash= this.cash-10000000
+                       }else{
+
+                   }
+
+            }else if(this.defence>=900000000){
+                    this.rundomgenerator(13)
+                           
+                     if (this.randomNum==1) {
+                     	alert("BREAKING NEWS: because of your continued support to the defence and security we can safely say our country is safe from an violant attack.")
+                    
+
+                     	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of security forces'."
+
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='violents4.jpg' alt='violents4' width='80%'></div>"]
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate.Why use force??."
+                       
+                     } else if (this.randomNum==2) {
+                     	alert("BREAKING NEWS: because of our strong defence and security. $50 million which was stolen under the former President was recovered and the Reserve got all of it.")
+                     	this.cash= this.cash+500000000
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We are proud of our defence security'."
+                     	 	
+			this.myNewsbest= this.caltime()
+
+			this.headlineImg=["<div><img src='violents2.jpg' alt='violents2' width='80%'></div>"]
+                     	this.bestNews= "Opposition party___Our democratic principals now need to be checked. Its the right of the people to demostrate.Why use force?."
+                     } else if (this.randomNum==3) {
+                     	alert("BREAKING NEWS: because of the President strong funding in morden security checking points at our airports and road blocks.The Reserve recovered $100 million from smuggling")
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='goodSecurity.jpg' alt='goodSecurity' width='80%'></div>"]
+                     	this.bestNews= "zzc news__ Our security proves to be one of the best in the world."
+                       }else{
+                        }
+                    }else{
+                    }
+
+
+
+
+
+			if (this.defence<100000000) {
+              this.unemployment= this.unemployment-0
+           	  this.inflation= (this.inflation*1)+1
+           	  this.calMoneySupply(1)
+           } else if (this.defence>=100000000 && this.defence<200000000) {
+           	this.unemployment=this.unemployment-0
+           	this.inflation= (this.inflation*1)+2
+           	this.calMoneySupply(2)
+           } else if (this.defence>=200000000 && this.defence<300000000) {
+                this.unemployment= this.unemployment-0
+                this.inflation= (this.inflation*1)+3
+                this.calMoneySupply(3)
+           }else if (this.defence>=300000000 && this.defence <400000000) {
+               this.unemployment= this.unemployment-0
+               this.inflation= (this.inflation*1)+4
+               this.calMoneySupply(4)
+           }else if (this.defence>=400000000 && this.defence <700000000) {
+           	this.unemployment= this.unemployment-1
+           	   if (this.defence>500000000) {
+           		this.inflation= (this.inflation*1)+8
+           		this.calMoneySupply(4.5)
+                	}
+                this.calMoneySupply(5)
+           }else if (this.defence>=700000000 && this.defence <900000000) {
+           	this.unemployment= this.unemployment-2
+           	this.inflation= (this.inflation*1)+15
+           	this.calMoneySupply(6)
+           }else{
+               this.unemployment= this.unemployment-3
+               this.inflation= (this.inflation*1)+20
+               this.calMoneySupply(8)
+           }
+
+
+
+
+                if (this.defence<=750000000) {
+					this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity.jpg' alt='badSecurity' width='80%'></div>"]
+                     	this.bestNews= "Vice President__Our security must be our priority"
+                       
+                     } else if (this.randomNum==2) {
+                     	
+
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Cityzens__'We have the right to security.The President should do better'"
+                     } else if (this.randomNum==3) {
+
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='badSecurity3.jpg' alt='badSecurity3' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is our security at risk?."
+
+                     }else{
+                     	alert("hello President")
+                     }
+
+                }else{
+                	this.rundomgenerator(4)
+             
+                     if (this.randomNum==1) {
+                     	 	
+			this.myNewsbetter= this.caltime()
+                     	this.betterNews= "Opposition party__'These are signs of a dictator, why put more and more money in the militery?'. On the economics side inflation will rise government expenditure must be limited."
+                       
+                     } else if (this.randomNum==2) {
+                     	
+                     	 	
+			this.myNewsworse2= this.caltime()
+                     	this.worseNews2= "Vice President__'The President knows why he is spending more on security, we need security for everything we shall be building'."
+                     } else if (this.randomNum==3) {
+                     	 	
+			this.myNewsbest= this.caltime()
+			this.headlineImg=["<div><img src='goodSecurity.jpg' alt='goodSecurity' width='80%'></div>"]
+                     	this.bestNews= "sstudio 77__Is this securing the nation or this is about mantaining Political power. On the economics side inflation will rise government expenditure must be limited."
+                }    
+
+                }
+
+
+
+
+
+            				this.deficietMonitor()
+
+			},
+			convertorH: function () {
+				if (this.health<1000000000) {
+					this.hConvertor= this.health/1000000
+					this.htype= "m"
+				} else {
+					this.hConvertor= this.health/1000000000
+					this.htype= "b"
+				}
+			},
+			convertorA: function () {
+				if (this.agricalture<1000000000) {
+					this.aConvertor= this.agricalture/1000000
+					this.atype= "m"
+				} else {
+					this.aConvertor= this.agricalture/1000000000
+					this.atype= "b"
+				}
+			},
+			convertorE: function () {
+
+
+
+				if (this.education<1000000000) {
+					this.eConvertor= this.education/1000000
+					this.etype= "m"
+				} else {
+					this.eConvertor= this.education/1000000000
+					this.etype= "b"
+				}
+			},
+			convertorD: function () {
+				if (this.defence<1000000000) {
+					this.dConvertor= this.defence/1000000
+					this.dtype= "m"
+				} else {
+					this.dConvertor= this.defence/1000000000
+					this.dtype= "b"
+				}
+			},
+			convertorI: function () {
+				if (this.infrastracture<1000000000) {
+					this.iConvertor= this.infrastracture/1000000
+					this.itype= "m"
+				} else {
+					this.iConvertor= this.infrastracture/1000000000
+					this.itype= "b"
+				}
+			},
+			convertorDD: function () {
+				if (this.defence<1000000000) {
+					this.ddConvertor= this.defence/1000000
+					this.ddtype= "m"
+				} else {
+					this.ddConvertor= this.defence/1000000000
+					this.ddtype= "b"
+				}
+			},
+			convertorII: function () {
+				if (this.infrastracture<1000000000) {
+					this.iiConvertor= this.infrastracture/1000000
+					this.iitype= "m"
+				} else {
+					this.iiConvertor= this.infrastracture/1000000000
+					this.iitype= "b"
+				}
+			},
+			convertorEE: function () {
+				if (this.education<1000000000) {
+					this.eeConvertor= this.education/1000000
+					this.eetype= "m"
+				} else {
+					this.eeConvertor= this.education/1000000000
+					this.eetype= "b"
+				}
+			},
+			convertorAA: function () {
+				if (this.agricalture<1000000000) {
+					this.aaConvertor= this.agricalture/1000000
+					this.aatype= "m"
+				} else {
+					this.aaConvertor= this.agricalture/1000000000
+					this.aatype= "b"
+				}
+			},
+			prices: function () {
+
+            this.bread= ((this.inflation*1)/100)+1
+            this.cooking= ((this.inflation*3)/100)+3
+            },
+			convertorHH: function () {
+				if (this.health<1000000000) {
+					this.hhConvertor= this.health/1000000
+					this.hhtype= "m"
+				} else {
+					this.hhConvertor= this.health/1000000000
+					this.hhtype= "b"
+				}
+			}
+
+
+		}
+
+
+	})
+
+
+
+
+</script>
+</body>
+
+<!--!
+* (c)2021 Dimond kudzai Madechawo
+* all rights reserved
+-->
+
+</html>
